@@ -12,15 +12,15 @@ application distribution platforms, including Google Play.
 
 Legal and privacy resources for the PhoneGuard application.
 
-- [Privacy Policy](./Phoneguard/privacy-policy.html)
-- [Account & Data Deletion](./Phoneguard/delete-account.html)
+- [Privacy Policy](./Phoneguard/privacy-policy/)
+- [Account & Data Deletion](./Phoneguard/delete-account/)
 
 ### Bhumitra
 
 Legal and privacy resources for the Bhumitra application.
 
-- [Privacy Policy](./Bhumitra/privacy-policy.html)
-- [Account & Data Deletion](./Bhumitra/delete-account.html)
+- [Privacy Policy](./Bhumitra/privacy-policy/)
+- [Account & Data Deletion](./Bhumitra/delete-account/)
 
 ## GitHub Pages
 
@@ -38,14 +38,20 @@ application directories.
 ```text
 app-legal-pages/
 │
-├── index.html
+├── Bhumitra/
+│   ├── account-deletion/
+│   │   └── index.html
+│   │
+│   └── privacy-policy/
+│       └── index.html
 │
 ├── Phoneguard/
-│   ├── privacy-policy.html
-│   └── delete-account.html
+│   ├── account-deletion/
+│   │   └── index.html
+│   │
+│   └── privacy-policy/
+│       └── index.html
 │
-├── Bhumitra/
-│   ├── privacy-policy.html
-│   └── delete-account.html
+├── index.html
 │
 └── README.md
