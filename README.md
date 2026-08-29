@@ -13,14 +13,14 @@ application distribution platforms, including Google Play.
 Legal and privacy resources for the PhoneGuard application.
 
 - [Privacy Policy](./Phoneguard/privacy-policy/)
-- [Account & Data Deletion](./Phoneguard/delete-account/)
+- [Account & Data Deletion](./Phoneguard/account-deletion/)
 
 ### Bhumitra
 
 Legal and privacy resources for the Bhumitra application.
 
 - [Privacy Policy](./Bhumitra/privacy-policy/)
-- [Account & Data Deletion](./Bhumitra/delete-account/)
+- [Account & Data Deletion](./Bhumitra/account-deletion/)
 
 ## GitHub Pages
 
