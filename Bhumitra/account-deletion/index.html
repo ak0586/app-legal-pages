@@ -4,133 +4,370 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Account & Data Deletion – BhuMitra</title>
+  <meta name="description" content="Official Account & Data Deletion Instructions and Section 12 DPDP Act Erasure Request Portal for BhuMitra: Land Measurement & Area Calculator.">
 
   <style>
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --primary-light: #e8f5e9;
+      --danger: #dc2626;
+      --danger-light: #fee2e2;
+      --bg: #f8faf8;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --border: #d1d5db;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f5f7fa;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
       margin: 0;
-      padding: 0;
-      color: #333;
+      padding: 30px 16px;
+      color: var(--text);
+      line-height: 1.7;
     }
 
     .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px 45px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #f1f3f4;
+      padding-bottom: 20px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      background: #e5e7eb;
+      padding: 4px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.3);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--danger-light);
+      color: var(--danger);
+      font-size: 0.82em;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     h1 {
-      color: #2c7be5;
-      text-align: center;
-      margin-bottom: 20px;
+      color: var(--primary-dark);
+      font-size: 2em;
+      margin: 6px 0 10px;
     }
 
-    h3 {
-      color: #333;
+    h2 {
+      color: var(--primary-dark);
+      font-size: 1.3em;
       margin-top: 30px;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
     }
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 15px;
+    p { margin-bottom: 14px; color: var(--text-muted); }
+
+    .highlight-card {
+      background-color: var(--primary-light);
+      border: 1px solid #c8e6c9;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 20px 0;
     }
+
+    .danger-card {
+      background-color: var(--danger-light);
+      border: 1px solid #fca5a5;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+
+    .danger-card strong { color: var(--danger); }
 
     ol {
-      margin-left: 20px;
-      margin-bottom: 20px;
+      margin-left: 10px;
+      padding-left: 20px;
+      margin-bottom: 18px;
     }
 
     li {
       margin-bottom: 8px;
+      color: var(--text-muted);
     }
 
-    .highlight {
-      background-color: #f0f4ff;
-      padding: 15px;
-      border-left: 4px solid #2c7be5;
+    table {
+      width: 100%;
+      border-collapse: collapse;
       margin: 20px 0;
+      font-size: 0.9em;
     }
 
-    .email {
-      font-weight: bold;
-      color: #2c7be5;
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f8e9;
+      color: var(--primary-dark);
+    }
+
+    .officer-card {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .btn-action {
+      display: inline-block;
+      padding: 10px 22px;
+      background: var(--danger);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .btn-action:hover {
+      background: #b91c1c;
     }
 
     footer {
       text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #777;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>Account & Data Deletion – BhuMitra</h1>
+    <header>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी (Hindi)</button>
+      </div>
+      <br>
+      <span class="badge">DPDP Act 2023 &bull; Section 12 Erasure</span>
+      <h1 id="title">Account & Data Deletion – BhuMitra</h1>
+      <p id="subtitle">Permanent Account Erasure, Partial Plot Deletion, and Privacy Rights</p>
+    </header>
 
-    <p>
-      BhuMitra provides an in-app option to delete user accounts and associated data.
-    </p>
+    <!-- ==================== ENGLISH SECTION ==================== -->
+    <div id="content-en" class="content-lang">
+      <div class="highlight-card">
+        <strong>Statutory Right to Erasure:</strong> Under <strong>Section 12 of India's Digital Personal Data Protection (DPDP) Act, 2023</strong>, and Google Play User Data Policies, Data Principals possess the unambiguous right to withdraw consent and obtain complete, permanent erasure of their personal information and survey records.
+      </div>
 
-    <h3>How to delete your account:</h3>
-    <ol>
-      <li>Open the <strong>BhuMitra</strong> app</li>
-      <li>Log in to your account</li>
-      <li>Go to <strong>Profile</strong></li>
-      <li>Click on <strong>"Delete Account"</strong></li>
-      <li>Enter your password</li>
-      <li>Click on <strong>Confirm</strong> to delete</li>
-    </ol>
+      <h2>Method 1: Instant In-App Account Deletion (Self-Service)</h2>
+      <p>You can execute permanent deletion directly from inside the BhuMitra app:</p>
+      <ol>
+        <li>Open the <strong>BhuMitra</strong> application on your mobile device.</li>
+        <li>Ensure you are logged in to the account you wish to purge.</li>
+        <li>Navigate to the <strong>Profile</strong> tab from the bottom navigation bar.</li>
+        <li>Scroll down to the account actions section and tap <strong>"Delete Account"</strong>.</li>
+        <li>Review the permanent deletion warning notice and tap <strong>Delete</strong>.</li>
+        <li>Enter your account password (or re-authenticate via Google Sign-In) to verify ownership.</li>
+        <li>Confirm the action. Your account and cloud records are immediately deleted and you are logged out.</li>
+      </ol>
 
-    <div class="highlight">
-      <p>
-        Once confirmed, your account and associated data (email, phone number,
-        and location-related data) will be permanently deleted.
-      </p>
+      <div class="danger-card">
+        <strong>Warning:</strong> Deleting your account is irreversible. All saved plots, GPS boundary polygons, area calculations, custom notes, and profile details will be permanently removed.
+      </div>
+
+      <h2>Method 2: Partial Data Deletion (Saved Plots Only)</h2>
+      <p>If you wish to retain your user account but remove specific property records or experimental land measurements:</p>
+      <ol>
+        <li>Open <strong>BhuMitra</strong> and tap <strong>Saved Plots</strong> on the home dashboard.</li>
+        <li>Locate the plot you wish to delete from the survey list.</li>
+        <li>Tap on the plot item to open its details.</li>
+        <li>Tap the <strong>Delete</strong> icon (Trash bin) at the bottom or top bar.</li>
+        <li>Confirm deletion. The plot's coordinates, perimeter records, and local storage footprint are instantly purged.</li>
+      </ol>
+
+      <h2>Method 3: Email Deletion Request (Lost Device or No App Access)</h2>
+      <p>If you have uninstalled the app or lost access to your device, our Data Protection team will process your deletion request manually:</p>
+      <ol>
+        <li>Send an email from your <strong>registered email address</strong> to:
+          <br><strong><a href="mailto:support@kyvronix.com" style="color: var(--primary); font-weight: 700;">support@kyvronix.com</a></strong> or <strong><a href="mailto:grievance@kyvronix.com" style="color: var(--primary); font-weight: 700;">grievance@kyvronix.com</a></strong>.
+        </li>
+        <li>Subject Line: <code>[Data Deletion Request] - BhuMitra Account - &lt;Your Registered Phone/Email&gt;</code></li>
+        <li>Body of Email: State your clear request to erase your BhuMitra account and all associated plot records under Section 12 of the DPDP Act, 2023.</li>
+        <li>Our team will acknowledge your request within <strong>48 hours</strong> and verify ownership before executing complete deletion within <strong>30 days</strong>.</li>
+      </ol>
+
+      <h2>Data Elements Purged vs. Retained</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Specific Elements</th>
+            <th>Purge Timeline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>User Profile</strong></td>
+            <td>Name, Email, Phone Number, Profile Photo, Auth UID</td>
+            <td>Purged instantly upon confirmation (both app & cloud).</td>
+          </tr>
+          <tr>
+            <td><strong>Geospatial Surveys</strong></td>
+            <td>GPS boundary coordinates, Polygon vertices, Plot names, Area calculations</td>
+            <td>Purged instantly from local device storage and cloud database.</td>
+          </tr>
+          <tr>
+            <td><strong>Exported Reports</strong></td>
+            <td>Locally saved PDF survey certificates or measurement summaries</td>
+            <td>Deleted from app folder upon uninstallation or manual file removal.</td>
+          </tr>
+          <tr>
+            <td><strong>Financial Telemetry</strong></td>
+            <td>Razorpay Order IDs and subscription activation receipts</td>
+            <td>Retained strictly for statutory GST/tax audit obligations as mandated by Indian financial laws (up to 7 years). No payment card numbers or UPI PINs are ever collected or stored.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Grievance Redressal & DPBI Escalation</h2>
+      <div class="officer-card">
+        <strong>Grievance Redressal Officer:</strong> Ankit Raj<br>
+        <strong>Data Fiduciary:</strong> Kyvronix Technologies<br>
+        <strong>Email:</strong> <a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a> | <strong>Helpline:</strong> +91 8851587898<br>
+        <strong>Address:</strong> 300, Band Abdulhaipur, Hasayan, Hathras, Uttar Pradesh, India - 204212<br>
+        <small style="color: var(--text-muted); display: block; margin-top: 6px;">
+          Statutory SLA: Acknowledgment within 48 hours; Complete disposal within 30 calendar days.<br>
+          Under Section 13(3) of the DPDP Act 2023, you have the right to escalate unresolved grievances to the <strong>Data Protection Board of India (DPBI)</strong>.
+        </small>
+      </div>
     </div>
 
-    <h3>Partial Data Deletion (Saved Plots)</h3>
+    <!-- ==================== HINDI SECTION ==================== -->
+    <div id="content-hi" class="content-lang" style="display: none;">
+      <div class="highlight-card">
+        <strong>डेटा मिटाने का वैधानिक अधिकार:</strong> भारत के <strong>डिजिटल व्यक्तिगत डेटा संरक्षण (DPDP) अधिनियम, 2023 की धारा 12</strong> और Google Play नीतियों के तहत, प्रत्येक उपयोगकर्ता को अपनी सहमति वापस लेने और अपने खाते व खेत सर्वेक्षण रिकॉर्ड को स्थायी रूप से मिटाने का पूर्ण अधिकार है।
+      </div>
 
-    <p>
-      Users can delete saved land plots without deleting their account.
-      Saved plots are stored locally on the user's device using Shared Preferences.
-    </p>
+      <h2>तरीका 1: ऐप के भीतर से तुरंत खाता हटाना (Self-Service)</h2>
+      <p>आप BhuMitra ऐप के अंदर से अपना खाता सीधे हटा सकते हैं:</p>
+      <ol>
+        <li>अपने फोन पर <strong>BhuMitra</strong> ऐप खोलें।</li>
+        <li>सुनिश्चित करें कि आप उसी खाते में लॉग इन हैं जिसे आप हटाना चाहते हैं।</li>
+        <li>निचले नेविगेशन बार से <strong>प्रोफ़ाइल (Profile)</strong> स्क्रीन पर जाएं।</li>
+        <li>नीचे स्क्रॉल करें और <strong>"खाता हटाएं" (Delete Account)</strong> पर टैप करें।</li>
+        <li>चेतावनी संदेश पढ़ें और <strong>हटाएं (Delete)</strong> पर क्लिक करें।</li>
+        <li>पहचान सत्यापित करने के लिए अपना पासवर्ड दर्ज करें (या Google खाते से पुष्टि करें)।</li>
+        <li>खाता और सभी सहेजे गए खेत तुरंत क्लाउड और डिवाइस से स्थायी रूप से हटा दिए जाएंगे।</li>
+      </ol>
 
-    <h3>How to delete saved plots:</h3>
-    <ol>
-      <li>Open the <strong>BhuMitra</strong> app</li>
-      <li>Log in to your account</li>
-      <li>Go to <strong>Saved Plots</strong></li>
-      <li>Select the plot you want to delete</li>
-      <li>Tap <strong>Delete</strong></li>
-    </ol>
+      <div class="danger-card">
+        <strong>चेतावनी:</strong> खाता हटाने की प्रक्रिया पूर्ववत नहीं की जा सकती। आपके सभी सहेजे गए भूखंड, जीपीएस सीमाएं, क्षेत्रफल गणना और प्रोफ़ाइल जानकारी हमेशा के लिए मिटा दी जाएगी।
+      </div>
 
-    <div class="highlight">
-      <p>
-        Deleted plots are removed immediately from the device.
-        This action does not affect your account.
-      </p>
+      <h2>तरीका 2: केवल विशिष्ट भूखंड हटाना (Partial Plot Deletion)</h2>
+      <p>यदि आप खाता रखना चाहते हैं लेकिन केवल कुछ विशिष्ट खेत मिटाना चाहते हैं:</p>
+      <ol>
+        <li>BhuMitra खोलें और मुख्य स्क्रीन पर <strong>सहेजे गए भूखंड (Saved Plots)</strong> पर जाएं।</li>
+        <li>जिस भूखंड को हटाना है उस पर टैप करके विवरण खोलें।</li>
+        <li>स्क्रीन पर <strong>हटाएं (Delete)</strong> बटन पर टैप करें।</li>
+        <li>पुष्टि करें। वह खेत तुरंत आपके फोन और क्लाउड स्टोरेज से हट जाएगा।</li>
+      </ol>
+
+      <h2>तरीका 3: ईमेल द्वारा खाता हटाने का अनुरोध</h2>
+      <p>यदि आपने ऐप अनइंस्टॉल कर दिया है या आपके पास डिवाइस तक पहुंच नहीं है:</p>
+      <ol>
+        <li>अपने पंजीकृत ईमेल से <strong><a href="mailto:support@kyvronix.com">support@kyvronix.com</a></strong> या <strong><a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></strong> पर ईमेल भेजें।</li>
+        <li>विषय: <code>[डेटा विलोपन अनुरोध] - BhuMitra खाता - &lt;मोबाइल या ईमेल&gt;</code></li>
+        <li>ईमेल में अपना खाता और सर्वेक्षण डेटा मिटाने का स्पष्ट अनुरोध लिखें।</li>
+        <li>हमारी टीम <strong>48 घंटे</strong> में पावती देगी और <strong>30 दिनों</strong> के भीतर सभी डेटा को स्थायी रूप से मिटा देगी।</li>
+      </ol>
+
+      <h2>शिकायत अधिकारी एवं DPBI अपील</h2>
+      <div class="officer-card">
+        <strong>शिकायत निवारण अधिकारी:</strong> अंकित राज (Ankit Raj)<br>
+        <strong>संस्था:</strong> Kyvronix Technologies<br>
+        <strong>ईमेल:</strong> <a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a> | <strong>फोन:</strong> +91 8851587898<br>
+        <strong>पता:</strong> 300, बंद अब्दुलहाईपुर, हसायन, हाथरस, उत्तर प्रदेश - 204212<br>
+        <small style="color: var(--text-muted); display: block; margin-top: 6px;">
+          DPDP अधिनियम की धारा 13(3) के अनुसार, यदि शिकायत का निवारण 30 दिनों में नहीं होता है, तो आप <strong>भारतीय डेटा संरक्षण बोर्ड (DPBI)</strong> में अपील दायर कर सकते हैं।
+        </small>
+      </div>
     </div>
-
-    <p>
-      If you are unable to access the app, you may request account or data deletion
-      by contacting us at:
-    </p>
-
-    <p class="email">
-      support@kyvronix.com
-    </p>
 
     <footer>
-      © 2025 BhuMitra. All rights reserved.
+      <p>&copy; 2026 BhuMitra &bull; Kyvronix Technologies &bull; All Rights Reserved.</p>
+      <p><a href="../privacy-policy/" style="color: var(--primary); font-weight: 600;">View Privacy Policy</a> | <a href="../../" style="color: var(--primary); font-weight: 600;">App Legal Hub</a></p>
     </footer>
   </div>
 
+  <script>
+    function switchLanguage(lang) {
+      const enContent = document.getElementById('content-en');
+      const hiContent = document.getElementById('content-hi');
+      const buttons = document.querySelectorAll('.lang-btn');
+
+      if (lang === 'hi') {
+        enContent.style.display = 'none';
+        hiContent.style.display = 'block';
+        document.getElementById('title').innerText = 'खाता एवं डेटा विलोपन – BhuMitra';
+        document.getElementById('subtitle').innerText = 'स्थायी खाता विलोपन, खेत का डेटा हटाना और धारा 12 अधिकार';
+        buttons[0].classList.remove('active');
+        buttons[1].classList.add('active');
+      } else {
+        enContent.style.display = 'block';
+        hiContent.style.display = 'none';
+        document.getElementById('title').innerText = 'Account & Data Deletion – BhuMitra';
+        document.getElementById('subtitle').innerText = 'Permanent Account Erasure, Partial Plot Deletion, and Privacy Rights';
+        buttons[0].classList.add('active');
+        buttons[1].classList.remove('active');
+      }
+    }
+  </script>
+
 </body>
 </html>
-

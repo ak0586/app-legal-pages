@@ -3,423 +3,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy -BhuMitra- Land Measurement App</title>
+    <title>Privacy Policy - BhuMitra: Land Measurement App</title>
+    <meta name="description" content="Official Privacy Policy and Data Protection Notice for BhuMitra: Land Measurement and GPS Area Calculator, compliant with the Digital Personal Data Protection (DPDP) Act, 2023.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #e8f5e9;
+            --bg-body: #f8faf8;
+            --bg-card: #ffffff;
+            --text-main: #1f2937;
+            --text-secondary: #4b5563;
+            --border-color: #d1d5db;
+            --accent-success: #16a34a;
+            --accent-warning: #d97706;
+            --accent-danger: #dc2626;
         }
-        
+        * { box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            margin: 0;
+            padding: 30px 16px;
         }
-        
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: var(--bg-card);
+            padding: 45px 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
         }
-        
-        h1 {
-            color: #2c5f2d;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            border-bottom: 3px solid #2c5f2d;
-            padding-bottom: 15px;
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #f1f3f4;
+            padding-bottom: 25px;
+            position: relative;
         }
-        
-        .last-updated {
-            color: #666;
+        .lang-switch {
+            display: inline-flex;
+            background: #e5e7eb;
+            padding: 4px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 18px;
+            border-radius: 20px;
             font-size: 0.9em;
-            margin-bottom: 30px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(46,125,50,0.3);
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 20px;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h1 {
+            color: var(--primary-dark);
+            margin: 10px 0 6px;
+            font-size: 2.1em;
+            font-weight: 800;
+        }
+        .meta-date {
+            color: var(--text-secondary);
+            font-size: 0.92em;
+            font-weight: 500;
+        }
         h2 {
-            color: #2c5f2d;
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            border-left: 4px solid #2c5f2d;
-            padding-left: 15px;
+            color: var(--primary-dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            font-size: 1.35em;
         }
-        
         h3 {
-            color: #3d7c3f;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 12px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-        
-        li {
+            color: #374151;
+            margin-top: 20px;
             margin-bottom: 8px;
+            font-size: 1.1em;
         }
-        
-        .highlight {
-            background-color: #fffacd;
-            padding: 15px;
-            border-left: 4px solid #ffd700;
-            margin: 20px 0;
-            border-radius: 4px;
+        p, li {
+            color: var(--text-secondary);
+            font-size: 0.98em;
         }
-        
-        .important {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ff9800;
-            margin: 20px 0;
-            border-radius: 4px;
+        ul, ol {
+            padding-left: 22px;
+            margin-bottom: 16px;
         }
-        
-        .contact-box {
-            background-color: #e8f5e9;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
+        li { margin-bottom: 6px; }
+        .highlight-box {
+            background: var(--primary-light);
+            border: 1px solid #c8e6c9;
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin: 22px 0;
         }
-        
-        a {
-            color: #2c5f2d;
-            text-decoration: none;
-            word-break: break-all;
+        .highlight-box strong { color: var(--primary-dark); }
+        .warning-box {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin: 22px 0;
         }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
+        .warning-box strong { color: #b45309; }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            font-size: 0.95em;
+            font-size: 0.92em;
         }
-        
         th, td {
-            padding: 12px;
+            border: 1px solid var(--border-color);
+            padding: 12px 14px;
             text-align: left;
-            border: 1px solid #ddd;
         }
-        
         th {
-            background-color: #2c5f2d;
+            background: #f1f8e9;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+        tr:nth-child(even) { background-color: #fafafa; }
+        .officer-card {
+            background: #ffffff;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            box-shadow: 0 2px 8px rgba(46,125,50,0.08);
+        }
+        .officer-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.2em;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 14px;
+        }
+        .grid-item {
+            background: #f9fafb;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .grid-item strong {
+            display: block;
+            color: var(--text-main);
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        footer {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.88em;
+            color: var(--text-secondary);
+        }
+        .btn-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: var(--primary);
             color: white;
+            text-decoration: none;
+            border-radius: 8px;
             font-weight: 600;
         }
-        
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .btn-link:hover {
+            background: var(--primary-dark);
         }
-        
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 2px solid #ddd;
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        strong {
-            color: #2c5f2d;
-        }
-        
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            h2 {
-                font-size: 1.5em;
-            }
-            
-            table {
-                font-size: 0.85em;
-            }
-            
-            th, td {
-                padding: 8px;
-            }
+            .container { padding: 25px 20px; }
+            .grid-2 { grid-template-columns: 1fr; }
+            h1 { font-size: 1.7em; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> December 14, 2025</p>
 
-        <h2>Introduction</h2>
-        <p>This Privacy Policy describes how our application collects, uses, stores, and shares your personal information when you use our land measurement application. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
-        <p>By using our App, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+<div class="container">
+    <header>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+            <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी (Hindi)</button>
+        </div>
+        <br>
+        <span class="badge">DPDP Act, 2023 Compliant</span>
+        <h1 id="title">BhuMitra – Privacy Policy & Data Notice</h1>
+        <p class="meta-date" id="meta-date"><strong>Effective Date:</strong> October 2026 | <strong>Version:</strong> 2.2 (DPDP Act Aligned)</p>
+    </header>
 
-        <h2>Information We Collect</h2>
+    <!-- ==================== ENGLISH SECTION ==================== -->
+    <div id="content-en" class="content-lang">
+        <div class="highlight-box">
+            <strong>Legal Notice under Section 5 of the Digital Personal Data Protection Act, 2023:</strong><br>
+            This Privacy Policy explains how <strong>Kyvronix Technologies</strong> ("Data Fiduciary", "we", "us", or "our") processes, stores, protects, and disposes of personal data collected through the <strong>BhuMitra: Land Measurement & Area Calculator</strong> mobile application and related services.
+        </div>
 
-        <h3>Personal Information</h3>
-        <p>We collect the following personal information from you:</p>
+        <h2>1. Statutory Roles & Applicability</h2>
+        <p>In adherence to the provisions of the Digital Personal Data Protection (DPDP) Act, 2023 (Act No. 22 of 2023):</p>
         <ul>
-            <li><strong>Name</strong>: Your full name for account identification and personalization</li>
-            <li><strong>Email Address</strong>: Your email for account creation, authentication, and communication</li>
-            <li><strong>Phone Number</strong>: Your contact number for account management and security purposes</li>
-            <li><strong>Physical Address</strong>: Your address to help manage land records and property information</li>
-            <li><strong>Location Data</strong>: Both approximate and precise location information</li>
+            <li><strong>Data Fiduciary:</strong> Kyvronix Technologies, registered in India, determining the purpose and means of processing personal data.</li>
+            <li><strong>Data Principal:</strong> You, the natural person using BhuMitra to measure land, calculate plot dimensions, and manage agricultural or real estate records.</li>
+            <li><strong>Data Processors:</strong> Infrastructure partners (e.g., Google Firebase, Google Maps Platform, Razorpay) processing data strictly on our instructions under confidentiality agreements.</li>
         </ul>
 
-        <h3>Location Information</h3>
-        <p>We collect and use location data in the following ways:</p>
-        <ul>
-            <li><strong>Precise Location (GPS)</strong>: Used to accurately measure land area and boundaries</li>
-            <li><strong>Approximate Location</strong>: Used for general geographic features and mapping</li>
-            <li><strong>Location Purpose</strong>: This data enables core functionality of the App, including land measurement, boundary mapping, and location visualization</li>
-        </ul>
-
-        <h3>Device Information</h3>
-        <p>We automatically collect certain device information, including:</p>
-        <ul>
-            <li><strong>Device ID</strong>: Unique identifier for your device</li>
-            <li><strong>Device Model</strong>: Information about your device hardware</li>
-            <li><strong>Operating System</strong>: Version of Android you're using</li>
-            <li><strong>App Usage Data</strong>: How you interact with the App</li>
-        </ul>
-
-        <h2>How We Use Your Information</h2>
-
-        <h3>Account Management</h3>
-        <ul>
-            <li>Creating and maintaining your user account</li>
-            <li>Authenticating your identity when you log in</li>
-            <li>Managing your profile and preferences</li>
-            <li>Providing customer support</li>
-        </ul>
-
-        <h3>App Functionality</h3>
-        <ul>
-            <li>Measuring land area using GPS coordinates</li>
-            <li>Storing and managing your land records</li>
-            <li>Visualizing property boundaries on maps</li>
-            <li>Enabling location-based features</li>
-            <li>Providing farming management tools</li>
-        </ul>
-
-        <h3>Communication</h3>
-        <ul>
-            <li>Sending important updates about your account</li>
-            <li>Responding to your inquiries and support requests</li>
-            <li>Notifying you of changes to our services</li>
-        </ul>
-
-        <h3>Advertising and Analytics</h3>
-        <ul>
-            <li>Displaying relevant advertisements</li>
-            <li>Analyzing app performance and user behavior</li>
-            <li>Improving our services and user experience</li>
-        </ul>
-
-        <h2>Third-Party Services</h2>
-        <p>We use the following trusted third-party services to provide and improve our App:</p>
+        <h2>2. Categories of Personal Data Collected (Data Matrix)</h2>
+        <p>We believe in strict data minimization (Section 6). We collect only data strictly necessary for land measurement, unit conversion, account management, and survey report generation:</p>
 
         <table>
             <thead>
                 <tr>
-                    <th>Service</th>
-                    <th>Purpose</th>
-                    <th>Data Shared</th>
+                    <th>Data Category</th>
+                    <th>Specific Data Elements</th>
+                    <th>Statutory Purpose</th>
+                    <th>Storage Mechanism</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Firebase Authentication</strong></td>
-                    <td>User identity management and secure authentication</td>
-                    <td>Name, Email, Phone Number</td>
+                    <td><strong>User Identity</strong></td>
+                    <td>Full Name, Email Address, Phone Number, Profile Photo (optional)</td>
+                    <td>Account authentication, customer support, and cloud survey sync across devices.</td>
+                    <td>Google Firebase Auth & encrypted cloud Firestore.</td>
                 </tr>
                 <tr>
-                    <td><strong>Firebase Firestore</strong></td>
-                    <td>Secure cloud storage for your data</td>
-                    <td>Name, Email, Phone, Address, Location, Land Records</td>
+                    <td><strong>Geospatial & GPS Telemetry</strong></td>
+                    <td>Precise GPS coordinates (Latitude, Longitude), boundary vertices, elevation data, point markers</td>
+                    <td>Real-time perimeter walk measurement, polygon area calculation, and boundary map overlays.</td>
+                    <td>Local SQLite on device; optionally synced to private cloud database if signed in.</td>
                 </tr>
                 <tr>
-                    <td><strong>Google Maps Platform</strong></td>
-                    <td>Location visualization and mapping functionality</td>
-                    <td>Location Data (GPS coordinates)</td>
+                    <td><strong>Survey & Plot Records</strong></td>
+                    <td>Plot Name, Calculated Area (Hectares, Acres, Bigha, Guntha, Sq. Yards, etc.), Perimeter, Crop/Soil notes</td>
+                    <td>Generating visual property maps, area calculation logs, and downloadable PDF survey reports.</td>
+                    <td>Stored locally on device (SharedPreferences / SQLite) & private user cloud database.</td>
                 </tr>
                 <tr>
-                    <td><strong>Google AdMob</strong></td>
-                    <td>Displaying advertisements within the App</td>
-                    <td>Device ID, Usage Data, General Location</td>
+                    <td><strong>Device & App Diagnostics</strong></td>
+                    <td>Device model, Android OS version, approximate network location, crash logs</td>
+                    <td>Diagnostic stability, app performance tuning, and fraud prevention.</td>
+                    <td>Firebase Crashlytics & temporary diagnostic logs.</td>
+                </tr>
+                <tr>
+                    <td><strong>Transaction Telemetry</strong></td>
+                    <td>Razorpay Order ID, Payment Status, Subscription Plan tier</td>
+                    <td>Granting ad-free Pro survey features. <em>(Note: We never access, handle, or store card numbers, UPI PINs, or banking passwords).</em></td>
+                    <td>Razorpay PCI-DSS compliant secure infrastructure.</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>Firebase Authentication (by Google)</h3>
+        <h2>3. Lawful Basis for Processing (Section 4 & 6)</h2>
+        <p>We process your personal and geospatial data solely based on your <strong>explicit, informed, and unambiguous consent</strong>. When you launch BhuMitra and grant runtime permissions (Location, Storage), you authorize processing strictly for the specified purpose of land measurement and surveying. You may withdraw consent at any time through the in-app settings.</p>
+
+        <h2>4. Zero Sale of Data & Third-Party Processors</h2>
+        <div class="highlight-box">
+            <strong>Zero-Monetization Pledge:</strong> We NEVER sell, rent, or trade your personal data, GPS survey logs, or land records to advertisers, data brokers, or marketing entities.
+        </div>
+        <p>We engage only vetted service providers bound by strict confidentiality:</p>
         <ul>
-            <li><strong>Purpose</strong>: User identity management and secure authentication</li>
-            <li><strong>Data Shared</strong>: Name, Email, Phone Number</li>
-            <li><strong>Privacy Policy</strong>: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+            <li><strong>Google Firebase (Google LLC):</strong> Cloud authentication, database storage, and crash analytics. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+            <li><strong>Google Maps Platform (Google LLC):</strong> Map tiles, satellite overlays, and distance/polygon projection. <a href="https://policies.google.com/privacy" target="_blank">Google Maps Privacy</a></li>
+            <li><strong>Google AdMob (Google LLC):</strong> Displays banner/interstitial advertisements in the free tier. Users may opt out of personalized ads via device settings or upgrade to the Ad-Free Pro plan.</li>
+            <li><strong>Razorpay Software Private Limited:</strong> Regulated payment gateway for subscription processing. <a href="https://razorpay.com/privacy/" target="_blank">Razorpay Privacy</a></li>
         </ul>
 
-        <h3>Firebase Firestore (by Google)</h3>
+        <h2>5. Children's Data Protection (Section 9 DPDP Act)</h2>
+        <p>In strict compliance with <strong>Section 9 of the DPDP Act, 2023</strong>:</p>
         <ul>
-            <li><strong>Purpose</strong>: Secure cloud storage for your data</li>
-            <li><strong>Data Shared</strong>: Name, Email, Phone, Address, Location, Land Records</li>
-            <li><strong>Privacy Policy</strong>: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+            <li>BhuMitra is designed for adult farmers, landowners, civil engineers, and survey professionals. We do not knowingly collect personal data from minors under 18 years of age.</li>
+            <li>We do not conduct behavioral monitoring, profiling, or targeted advertising directed at children.</li>
+            <li>If a parent or guardian discovers that a minor has submitted personal details, they may notify our Grievance Officer for immediate erasure.</li>
         </ul>
 
-        <h3>Google Maps Platform</h3>
+        <h2>6. Statutory Rights of the Data Principal (Sections 11–14)</h2>
+        <p>As a Data Principal under Indian law, you are entitled to exercise the following statutory rights:</p>
+        <ol>
+            <li><strong>Right to Access Information (Section 11):</strong> Request a summary of your personal data, survey records, and processing activities.</li>
+            <li><strong>Right to Correction & Erasure (Section 12):</strong> Rectify inaccurate survey notes, edit profile information, or request complete, permanent erasure of your account and plot data.</li>
+            <li><strong>Right of Grievance Redressal (Section 13):</strong> File a grievance regarding data privacy with our designated Grievance Officer and receive an acknowledgment within 48 hours.</li>
+            <li><strong>Right to Nominate (Section 14):</strong> Nominate an individual who, in the event of death or incapacity, shall exercise your rights as a Data Principal.</li>
+            <li><strong>Right to Withdraw Consent:</strong> Revoke permissions or withdraw processing consent at any time without penalty.</li>
+        </ol>
+
+        <h2>7. Data Retention & Permanent Erasure</h2>
+        <p>We retain your personal data only as long as your account remains active or as required by statutory regulations:</p>
         <ul>
-            <li><strong>Purpose</strong>: Location visualization and mapping functionality</li>
-            <li><strong>Data Shared</strong>: Location Data (GPS coordinates)</li>
-            <li><strong>Privacy Policy</strong>: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+            <li><strong>Self-Service Erasure:</strong> You can delete your account directly inside the app under <em>Profile &rarr; Delete Account</em>. This permanently deletes your identity, saved plots, and cloud telemetry.</li>
+            <li><strong>Partial Data Erasure:</strong> You can delete individual survey plots under <em>Saved Plots &rarr; Delete Plot</em>.</li>
+            <li><strong>Web Erasure Portal:</strong> Users who uninstalled the app or lost device access can initiate an erasure request via our dedicated <a href="../account-deletion/" class="btn-link">Account & Data Deletion Portal</a>.</li>
+        </ol>
+
+        <h2>8. Technical & Organizational Security Measures (Section 8(5))</h2>
+        <p>To prevent unauthorized access, alteration, or disclosure of your survey records, we implement industry-standard safeguards:</p>
+        <ul>
+            <li><strong>End-to-End Transport Security:</strong> All API communication between the app and cloud backend is encrypted via HTTPS/TLS 1.3.</li>
+            <li><strong>Encrypted Database Storage:</strong> Cloud Firestore stores records in encrypted format at rest (AES-256).</li>
+            <li><strong>Local Isolation:</strong> Plots saved offline remain in sandboxed application storage protected by Android's security sandbox.</li>
         </ul>
 
-        <h3>Google AdMob</h3>
-        <ul>
-            <li><strong>Purpose</strong>: Displaying advertisements within the App</li>
-            <li><strong>Data Shared</strong>: Device ID, Usage Data, General Location</li>
-            <li><strong>Privacy Policy</strong>: <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a></li>
-        </ul>
+        <h2>9. Grievance Redressal Mechanism & Statutory Escalation</h2>
+        <p>In compliance with <strong>Section 8(9) and Section 13</strong> of the DPDP Act, 2023, Kyvronix Technologies has designated a formal Grievance Redressal Officer:</p>
 
-        <div class="important">
-            <strong>Note about AdMob:</strong> AdMob may collect and share device identifiers for advertising purposes. You can opt out of personalized advertising through your device settings.
+        <div class="officer-card">
+            <h3>Designated Grievance Redressal Officer</h3>
+            <p>For any inquiries, consent withdrawal, or statutory complaints under the DPDP Act, 2023, please reach out to:</p>
+            <div class="grid-2">
+                <div class="grid-item">
+                    <strong>Grievance Officer:</strong>
+                    <span>Ankit Raj</span>
+                </div>
+                <div class="grid-item">
+                    <strong>Organization:</strong>
+                    <span>Kyvronix Technologies</span>
+                </div>
+                <div class="grid-item">
+                    <strong>Email Address:</strong>
+                    <span><a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a> / <a href="mailto:support@kyvronix.com">support@kyvronix.com</a></span>
+                </div>
+                <div class="grid-item">
+                    <strong>Support Helpline:</strong>
+                    <span>+91 8851587898</span>
+                </div>
+                <div class="grid-item" style="grid-column: span 2;">
+                    <strong>Physical Postal Address:</strong>
+                    <span>300, Band Abdulhaipur, Hasayan, Hathras, Uttar Pradesh, India - 204212</span>
+                </div>
+            </div>
+            <div style="margin-top: 14px; font-size: 0.9em; color: var(--text-secondary);">
+                <strong>Statutory Redressal Timelines:</strong>
+                <ul>
+                    <li>Acknowledgment of grievance: Within <strong>48 hours</strong>.</li>
+                    <li>Investigation and final disposal: Within <strong>30 calendar days</strong>.</li>
+                </ul>
+            </div>
         </div>
 
-        <h2>Data Storage and Security</h2>
-
-        <h3>Storage Location</h3>
-        <p>Your data is stored securely in Firebase Firestore, which uses industry-standard encryption and security measures. Data is stored on servers located in secure data centers.</p>
-
-        <h3>Security Measures</h3>
-        <p>We implement appropriate technical and organizational measures to protect your personal information, including:</p>
-        <ul>
-            <li>Encrypted data transmission (HTTPS/SSL)</li>
-            <li>Secure authentication protocols</li>
-            <li>Access controls and authentication requirements</li>
-            <li>Regular security assessments</li>
-            <li>Encrypted data storage</li>
-        </ul>
-
-        <h3>Data Retention</h3>
-        <p>We retain your personal information for as long as:</p>
-        <ul>
-            <li>Your account is active</li>
-            <li>Needed to provide you services</li>
-            <li>Required by law or for legitimate business purposes</li>
-        </ul>
-        <p>You may request deletion of your account and data at any time.</p>
-
-        <h2>Your Rights and Choices</h2>
-        <p>You have the following rights regarding your personal information:</p>
-
-        <h3>Access and Correction</h3>
-        <ul>
-            <li>View and update your personal information in the App settings</li>
-            <li>Request a copy of your data</li>
-        </ul>
-
-        <h3>Deletion</h3>
-        <ul>
-            <li>Delete your account and associated data</li>
-            <li>Request removal of specific information</li>
-        </ul>
-
-        <h3>Location Services</h3>
-        <ul>
-            <li>Enable or disable location access in your device settings</li>
-            <li>Note that disabling location will limit core App functionality</li>
-        </ul>
-
-        <h3>Advertising</h3>
-        <ul>
-            <li>Opt out of personalized ads through your device settings (Android: Settings > Google > Ads > Opt out of Ads Personalization)</li>
-            <li>You will still see ads, but they will be less relevant to you</li>
-        </ul>
-
-        <h3>Data Portability</h3>
-        <ul>
-            <li>Request an export of your data in a portable format</li>
-        </ul>
-
-        <p>To exercise any of these rights, please contact us at the email address provided below.</p>
-
-        <h2>Children's Privacy</h2>
-        <p>Our App is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us, and we will delete such information.</p>
-
-        <h2>Data Sharing and Disclosure</h2>
-
-        <div class="highlight">
-            <h3>We Do NOT Sell Your Data</h3>
-            <p>We do not sell, rent, or trade your personal information to third parties for their marketing purposes.</p>
+        <div class="warning-box">
+            <strong>Escalation to the Data Protection Board of India (DPBI):</strong><br>
+            Under <strong>Section 13(3) of the DPDP Act, 2023</strong>, if you are not satisfied with the resolution provided by our Grievance Officer or if a response is not provided within 30 days, you have the statutory right to escalate your complaint to the <strong>Data Protection Board of India (DPBI)</strong>.
         </div>
 
-        <h3>When We May Share Data</h3>
-        <p>We may share your information in the following circumstances:</p>
-        <ul>
-            <li><strong>Service Providers</strong>: With third-party services listed above to operate our App</li>
-            <li><strong>Legal Requirements</strong>: When required by law or to respond to legal processes</li>
-            <li><strong>Safety and Security</strong>: To protect the rights, property, or safety of our users or others</li>
-            <li><strong>Business Transfers</strong>: In connection with a merger, acquisition, or sale of assets</li>
-        </ul>
+        <h2>10. Updates to This Policy</h2>
+        <p>We may periodically update this notice to reflect product improvements or statutory rules issued under the DPDP Act. Major changes will be communicated via in-app notifications. Continued usage of BhuMitra after the effective date constitutes acknowledgment of the updated policy.</p>
+    </div>
 
-        <h2>International Data Transfers</h2>
-        <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws. We ensure appropriate safeguards are in place to protect your information.</p>
-
-        <h2>Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by:</p>
-        <ul>
-            <li>Posting the new Privacy Policy in the App</li>
-            <li>Updating the "Last Updated" date</li>
-            <li>Sending a notification through the App or email for significant changes</li>
-        </ul>
-        <p>Your continued use of the App after changes constitutes acceptance of the updated Privacy Policy.</p>
-
-        <h2>Permissions Required</h2>
-        <p>Our App requires the following permissions:</p>
-        <ul>
-            <li><strong>Location</strong>: To measure land area and display maps (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION)</li>
-            <li><strong>Internet</strong>: To sync data and display maps (INTERNET, ACCESS_NETWORK_STATE)</li>
-            <li><strong>Storage</strong>: To cache map data and save photos (READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE)</li>
-        </ul>
-        <p>You can manage these permissions in your device settings at any time.</p>
-
-        <h2>Contact Us</h2>
-        <div class="contact-box">
-            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
-            <p><strong>Email:</strong> ankitraj81919895@gmail.com</p>
-            <p><strong>Address:</strong> 300, Band Abdulhaipur, Hasayan, Hathras, Uttar Pradesh, India (204212).</p>
-            <p><strong>Phone:</strong> +91 8851587898</p>
+    <!-- ==================== HINDI SECTION ==================== -->
+    <div id="content-hi" class="content-lang" style="display: none;">
+        <div class="highlight-box">
+            <strong>डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023 की धारा 5 के तहत वैधानिक सूचना:</strong><br>
+            यह गोपनीयता नीति बताती है कि <strong>Kyvronix Technologies</strong> ("डेटा फिड्यूशरी", "हम" या "हमारा") <strong>BhuMitra: Land Measurement & Area Calculator</strong> मोबाइल ऐप के माध्यम से व्यक्तिगत डेटा को कैसे एकत्र, संसाधित, सुरक्षित और समाप्त करता है।
         </div>
 
-        <h2>Compliance</h2>
-        <p>This Privacy Policy complies with:</p>
+        <h2>1. वैधानिक भूमिकाएं और प्रयोज्यता</h2>
+        <p>डिजिटल व्यक्तिगत डेटा संरक्षण (DPDP) अधिनियम, 2023 (2023 का अधिनियम संख्या 22) के प्रावधानों के अनुसार:</p>
         <ul>
-            <li>Google Play Developer Program Policies</li>
-            <li>General Data Protection Regulation (GDPR)</li>
-            <li>California Consumer Privacy Act (CCPA)</li>
-            <li>Other applicable data protection laws</li>
+            <li><strong>डेटा फिड्यूशरी (Data Fiduciary):</strong> Kyvronix Technologies, जो डेटा प्रसंस्करण के उद्देश्य और साधनों को निर्धारित करती है।</li>
+            <li><strong>डेटा प्रिंसिपल (Data Principal):</strong> आप, जो भूमि नापने, क्षेत्रफल की गणना करने और कृषि/भूखंड रिकॉर्ड सुरक्षित रखने के लिए BhuMitra का उपयोग करते हैं।</li>
+            <li><strong>डेटा प्रोसेसर (Data Processor):</strong> तकनीकी भागीदार (Google Firebase, Google Maps Platform, Razorpay) जो केवल हमारे निर्देशों पर डेटा प्रोसेस करते हैं।</li>
         </ul>
 
-        <div class="footer">
-            <p><strong>Acknowledgment:</strong> By using our App, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.</p>
+        <h2>2. एकत्र किए जाने वाले व्यक्तिगत डेटा की श्रेणियां</h2>
+        <p>हम डेटा न्यूनतमकरण के सिद्धांत (धारा 6) का सख्ती से पालन करते हैं। केवल भूमि नापने, इकाई रूपांतरण, और खाता प्रबंधन के लिए आवश्यक डेटा ही लिया जाता है:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>डेटा श्रेणी</th>
+                    <th>डेटा घटक</th>
+                    <th>वैधानिक उद्देश्य</th>
+                    <th>स्टोरेज का माध्यम</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>उपयोगकर्ता पहचान</strong></td>
+                    <td>पूरा नाम, ईमेल आईडी, मोबाइल नंबर, प्रोफ़ाइल फोटो</td>
+                    <td>खाता सत्यापन, सहायता सेवा और क्लाउड सिंक।</td>
+                    <td>Google Firebase Auth और एन्क्रिप्टेड Firestore।</td>
+                </tr>
+                <tr>
+                    <td><strong>जियोस्spatial एवं GPS टेलीमेट्री</strong></td>
+                    <td>सटीक GPS निर्देशांक (अक्षांश, देशांतर), सीमा बिंदु, ऊंचाई डेटा</td>
+                    <td>चलकर खेत की सीमा नापना, बहुभुज क्षेत्रफल गणना और मानचित्र प्रदर्शन।</td>
+                    <td>डिवाइस पर लोकल SQLite; खाता लॉगिन होने पर निजी क्लाउड में सुरक्षित।</td>
+                </tr>
+                <tr>
+                    <td><strong>भूखंड एवं सर्वेक्षण रिकॉर्ड</strong></td>
+                    <td>खेत/प्लॉट का नाम, परिकलित क्षेत्रफल (हेक्टेयर, एकड़, बीघा, गुंठा आदि), परिमाप, फसल/मिट्टी विवरण</td>
+                    <td>नक्शा निर्माण, क्षेत्रफल गणना रिपोर्ट और पीडीएफ (PDF) सर्वेक्षण डाउनलोड।</td>
+                    <td>लोकल डिवाइस स्टोरेज और उपयोगकर्ता का निजी क्लाउड डेटाबेस।</td>
+                </tr>
+                <tr>
+                    <td><strong>डिवाइस एवं ऐप डायग्नोस्टिक्स</strong></td>
+                    <td>मोबाइल मॉडल, एंड्रॉइड OS वर्जन, नेटवर्क स्थिति, क्रैश लॉग</td>
+                    <td>ऐप की स्थिरता, बग सुधार और सुरक्षा सुरक्षा।</td>
+                    <td>Firebase Crashlytics और अस्थायी सिस्टम लॉग्स।</td>
+                </tr>
+                <tr>
+                    <td><strong>लेनदेन टेलीमेट्री</strong></td>
+                    <td>Razorpay ऑर्डर आईडी, भुगतान स्थिति, सदस्यता प्लान</td>
+                    <td>विज्ञापन-मुक्त प्रो फीचर्स सक्रिय करना। <em>(हम कभी भी आपका कार्ड नंबर, UPI पिन या बैंक पासवर्ड स्टोर या एक्सेस नहीं करते)।</em></td>
+                    <td>Razorpay PCI-DSS प्रमाणित सुरक्षित गेटवे।</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. डेटा प्रसंस्करण का कानूनी आधार (धारा 4 और 6)</h2>
+        <p>हम आपके डेटा को केवल आपकी <strong>स्पष्ट, सूचित और असंदिग्ध सहमति</strong> के आधार पर प्रोसेस करते हैं। जब आप BhuMitra में लोकेशन और स्टोरेज अनुमति देते हैं, तो वह केवल भूमि सर्वेक्षण और क्षेत्रफल मापने के लिए उपयोग होती है। आप किसी भी समय सहमति वापस ले सकते हैं।</p>
+
+        <h2>4. डेटा न बेचने की गारंटी एवं तृतीय-पक्ष प्रोसेसर</h2>
+        <div class="highlight-box">
+            <strong>शून्य मुद्रीकरण प्रतिज्ञा:</strong> हम आपके व्यक्तिगत डेटा, खेत के नक्शों या GPS सर्वेक्षण डेटा को कभी भी किसी विज्ञापनदाता, डेटा ब्रोकर या मार्केटिंग कंपनी को नहीं बेचते हैं।
+        </div>
+        <p>हम केवल प्रतिष्ठित और सुरक्षित तृतीय-पक्ष सेवाओं का उपयोग करते हैं:</p>
+        <ul>
+            <li><strong>Google Firebase:</strong> सुरक्षित क्लाउड प्रमाणीकरण, डेटाबेस स्टोरेज और क्रैश मॉनिटरिंग।</li>
+            <li><strong>Google Maps Platform:</strong> सैटेलाइट मैप टाइल्स, भू-भाग दृश्य और दूरी/क्षेत्रफल प्रोजेक्शन।</li>
+            <li><strong>Google AdMob:</strong> ऐप के निःशुल्क संस्करण में प्रासंगिक विज्ञापन। आप डिवाइस सेटिंग से निजीकृत विज्ञापनों को बंद कर सकते हैं।</li>
+            <li><strong>Razorpay:</strong> प्रो संस्करण की सदस्यता के लिए भारतीय रिजर्व बैंक द्वारा विनियमित सुरक्षित भुगतान गेटवे।</li>
+        </ul>
+
+        <h2>5. बच्चों के डेटा का संरक्षण (DPDP अधिनियम की धारा 9)</h2>
+        <p><strong>DPDP अधिनियम 2023 की धारा 9</strong> के तहत:</p>
+        <ul>
+            <li>BhuMitra वयस्कों, किसानों, भूमि मालिकों और सर्वेयरों के लिए है। हम 18 वर्ष से कम आयु के बच्चों का व्यक्तिगत डेटा नहीं मांगते।</li>
+            <li>हम बच्चों पर केंद्रित व्यवहार ट्रैकिंग, प्रोफाइलिंग या लक्षित विज्ञापन नहीं चलाते।</li>
+            <li>यदि अभिभावक को जानकारी मिलती है कि किसी अवयस्क ने विवरण दर्ज किया है, तो वे तुरंत हटाने के लिए शिकायत अधिकारी से संपर्क कर सकते हैं।</li>
+        </ul>
+
+        <h2>6. डेटा प्रिंसिपल के वैधानिक अधिकार (धारा 11–14)</h2>
+        <p>भारतीय कानून के तहत आपको निम्नलिखित अधिकार प्राप्त हैं:</p>
+        <ol>
+            <li><strong>डेटा तक पहुंच का अधिकार (धारा 11):</strong> अपने सहेजे गए भूखंडों, व्यक्तिगत विवरण और प्रसंस्करण इतिहास की जानकारी प्राप्त करना।</li>
+            <li><strong>सुधार और मिटाने का अधिकार (Right to Erasure - धारा 12):</strong> गलत विवरण सुधारना या अपने खाते और सर्वेक्षण डेटा को स्थायी रूप से मिटाना।</li>
+            <li><strong>शिकायत निवारण का अधिकार (धारा 13):</strong> गोपनीयता संबंधी किसी भी समस्या के लिए हमारे शिकायत अधिकारी से संपर्क करना (48 घंटों में पावती)।</li>
+            <li><strong>नामांकन का अधिकार (Right to Nominate - धारा 14):</strong> मृत्यु या अक्षमता की स्थिति में अपने डेटा अधिकारों का प्रयोग करने के लिए किसी प्रतिनिधि को नामित करना।</li>
+            <li><strong>सहमति वापस लेने का अधिकार:</strong> किसी भी समय ऐप परमिशन या डेटा सहमति वापस लेना।</li>
+        </ol>
+
+        <h2>7. डेटा प्रतिधारण और खाता हटाना</h2>
+        <p>हम आपका डेटा केवल तब तक रखते हैं जब तक आपका खाता सक्रिय है:</p>
+        <ul>
+            <li><strong>ऐप के भीतर से मिटाना:</strong> <em>प्रोफ़ाइल &rarr; खाता हटाएं (Delete Account)</em> पर जाकर आप अपने खाते, सहेजे गए खेतों और सभी क्लाउड डेटा को तुरंत हटा सकते हैं।</li>
+            <li><strong>अलग-अलग खेत हटाना:</strong> <em>सहेजे गए भूखंड &rarr; भूखंड हटाएं</em> से केवल विशिष्ट प्लॉट मिटाया जा सकता है।</li>
+            <li><strong>वेब डिलीशन पोर्टल:</strong> यदि आपने ऐप अनइंस्टॉल कर दिया है, तो हमारे <a href="../account-deletion/" class="btn-link">खाता एवं डेटा विलोपन पोर्टल</a> से सीधे अनुरोध भेज सकते हैं।</li>
+        </ul>
+
+        <h2>8. शिकायत निवारण अधिकारी एवं DPBI अपील</h2>
+        <p><strong>DPDP अधिनियम, 2023 की धारा 8(9) और धारा 13</strong> के अनुपालन में नियुक्त अधिकारी:</p>
+
+        <div class="officer-card">
+            <h3>नामित शिकायत निवारण अधिकारी (Grievance Redressal Officer)</h3>
+            <p>किसी भी गोपनीयता प्रश्न, सहमति वापसी या वैधानिक शिकायत के लिए संपर्क करें:</p>
+            <div class="grid-2">
+                <div class="grid-item">
+                    <strong>अधिकारी का नाम:</strong>
+                    <span>अंकित राज (Ankit Raj)</span>
+                </div>
+                <div class="grid-item">
+                    <strong>संस्था:</strong>
+                    <span>Kyvronix Technologies</span>
+                </div>
+                <div class="grid-item">
+                    <strong>ईमेल पता:</strong>
+                    <span><a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a> / <a href="mailto:support@kyvronix.com">support@kyvronix.com</a></span>
+                </div>
+                <div class="grid-item">
+                    <strong>हेल्पलाइन नंबर:</strong>
+                    <span>+91 8851587898</span>
+                </div>
+                <div class="grid-item" style="grid-column: span 2;">
+                    <strong>कार्यालय का पता:</strong>
+                    <span>300, बंद अब्दुलहाईपुर, हसायन, हाथरस, उत्तर प्रदेश, भारत - 204212</span>
+                </div>
+            </div>
+            <div style="margin-top: 14px; font-size: 0.9em; color: var(--text-secondary);">
+                <strong>वैधानिक समाधान समय-सीमा:</strong>
+                <ul>
+                    <li>शिकायत की पावती (Acknowledgment): <strong>48 घंटे</strong> के भीतर।</li>
+                    <li>शिकायत का अंतिम निस्तारण: <strong>30 कार्य दिवसों</strong> के भीतर।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <strong>भारतीय डेटा संरक्षण बोर्ड (DPBI) में अपील:</strong><br>
+            <strong>DPDP अधिनियम 2023 की धारा 13(3)</strong> के अनुसार, यदि आप हमारे शिकायत अधिकारी के निर्णय से संतुष्ट नहीं हैं या 30 दिनों में समाधान नहीं मिलता है, तो आपको <strong>भारतीय डेटा संरक्षण बोर्ड (Data Protection Board of India - DPBI)</strong> में वैधानिक अपील दर्ज करने का पूर्ण अधिकार है।
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 BhuMitra &bull; Developed by Kyvronix Technologies &bull; All Rights Reserved.</p>
+        <p><a href="../account-deletion/" style="color: var(--primary); font-weight: 600;">Account & Data Deletion Portal</a> | <a href="../../" style="color: var(--primary); font-weight: 600;">All Apps Legal Hub</a></p>
+    </footer>
+</div>
+
+<script>
+    function switchLanguage(lang) {
+        const enContent = document.getElementById('content-en');
+        const hiContent = document.getElementById('content-hi');
+        const buttons = document.querySelectorAll('.lang-btn');
+
+        if (lang === 'hi') {
+            enContent.style.display = 'none';
+            hiContent.style.display = 'block';
+            document.getElementById('title').innerText = 'BhuMitra – गोपनीयता नीति एवं डेटा नोटिस';
+            document.getElementById('meta-date').innerHTML = '<strong>प्रभावी तिथि:</strong> अक्टूबर 2026 | <strong>संस्करण:</strong> 2.2 (DPDP अधिनियम अनुरूप)';
+            buttons[0].classList.remove('active');
+            buttons[1].classList.add('active');
+        } else {
+            enContent.style.display = 'block';
+            hiContent.style.display = 'none';
+            document.getElementById('title').innerText = 'BhuMitra – Privacy Policy & Data Notice';
+            document.getElementById('meta-date').innerHTML = '<strong>Effective Date:</strong> October 2026 | <strong>Version:</strong> 2.2 (DPDP Act Aligned)';
+            buttons[0].classList.add('active');
+            buttons[1].classList.remove('active');
+        }
+    }
+</script>
+
 </body>
 </html>
