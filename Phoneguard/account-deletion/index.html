@@ -3,358 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PhoneGuard - Account & Data Deletion</title>
-
-    <meta
-        name="description"
-        content="Request deletion of your PhoneGuard account and associated data, or learn how to delete specific data while keeping your account."
-    >
-
+    <title>Account &amp; Data Deletion - PhoneGuard</title>
+    <meta name="description" content="Official Account & Data Deletion Portal for PhoneGuard: Lost Phone Recovery. Learn how to exercise your statutory Right to Erasure under the DPDP Act, 2023.">
     <style>
-        * {
-            box-sizing: border-box;
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-main: #202124;
+            --text-secondary: #5f6368;
+            --border-color: #e0e0e0;
+            --danger: #d93025;
+            --danger-bg: #fce8e6;
+            --success-bg: #e6f4ea;
+            --success-border: #b7e1cd;
         }
-
+        * { box-sizing: border-box; }
         body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-body);
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #1f2937;
-            line-height: 1.6;
+            padding: 30px 16px;
         }
-
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 45px 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+        }
         header {
-            background: #111827;
-            color: white;
-            padding: 45px 20px;
             text-align: center;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #f1f3f4;
+            padding-bottom: 25px;
         }
-
-        header h1 {
-            margin: 0 0 10px;
-            font-size: 32px;
+        .lang-switch {
+            display: inline-flex;
+            background: #e8eaed;
+            padding: 4px;
+            border-radius: 30px;
+            margin-bottom: 20px;
         }
-
-        header p {
-            margin: 0;
-            color: #d1d5db;
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 700;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-
-        main {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 20px;
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(26,115,232,0.3);
         }
-
-        section {
-            background: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+        .badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 20px;
+            background: #e8f0fe;
+            color: var(--primary);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
-
-        h2 {
-            margin-top: 0;
+        h1 {
             color: #111827;
+            font-size: 2.2em;
+            margin: 10px 0 5px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
-
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05em;
+            margin-top: 5px;
+        }
+        h2 {
+            color: #1a1a1a;
+            margin-top: 35px;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
         h3 {
-            margin-top: 25px;
-            color: #1f2937;
+            color: var(--primary-dark);
+            margin-top: 22px;
+            font-size: 1.1em;
+            font-weight: 700;
         }
-
-        ul,
-        ol {
-            padding-left: 25px;
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1em;
         }
-
+        ul, ol {
+            padding-left: 24px;
+        }
         li {
             margin-bottom: 8px;
         }
-
-        .important {
-            background: #fff7ed;
-            border-left: 4px solid #f97316;
-            padding: 15px 18px;
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px;
             margin: 20px 0;
         }
-
-        .success {
-            background: #f0fdf4;
-            border-left: 4px solid #22c55e;
-            padding: 15px 18px;
+        .alert-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffb300;
+            padding: 16px 20px;
+            border-radius: 8px;
             margin: 20px 0;
+            font-size: 0.96em;
         }
-
-        .delete-box {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            border-radius: 10px;
+        .success-box {
+            background: var(--success-bg);
+            border-left: 4px solid #0f9d58;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.96em;
+        }
+        .delete-panel {
+            background: var(--danger-bg);
+            border: 1px solid #f5c2c7;
+            border-radius: 12px;
             padding: 25px;
             margin-top: 20px;
         }
-
-        .delete-button {
+        .delete-panel h3 {
+            color: var(--danger);
+            margin-top: 0;
+        }
+        .btn-delete {
             display: inline-block;
-            background: #dc2626;
-            color: white;
+            background: var(--danger);
+            color: #ffffff;
             text-decoration: none;
-            padding: 13px 20px;
+            padding: 12px 22px;
             border-radius: 8px;
-            font-weight: bold;
-            margin-top: 10px;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-top: 12px;
+            transition: background 0.2s ease;
         }
-
-        .delete-button:hover {
-            background: #b91c1c;
+        .btn-delete:hover {
+            background: #b71c1c;
         }
-
-        a {
-            color: #2563eb;
-        }
-
-        footer {
+        .footer-note {
             text-align: center;
-            padding: 30px 20px;
-            color: #6b7280;
-            font-size: 14px;
+            font-size: 0.88em;
+            color: #80868b;
+            margin-top: 40px;
+            border-top: 1px solid #e8eaed;
+            padding-top: 20px;
         }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
-
-            section {
-                padding: 22px;
-            }
+        @media (max-width: 768px) {
+            .container { padding: 25px 20px; }
+            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-en" onclick="switchLanguage('en')">English</button>
+                <button class="lang-btn" id="btn-hi" onclick="switchLanguage('hi')">हिंदी (Hindi)</button>
+            </div>
+            <br>
+            <div class="badge">DPDP ACT 2023 • RIGHT TO ERASURE (SECTION 12)</div>
+            <h1 id="title-text">Account &amp; Data Deletion</h1>
+            <p class="subtitle" id="subtitle-text">Complete control over your personal data, records, and cloud storage.</p>
+        </header>
 
-<header>
-    <h1>PhoneGuard Account & Data Deletion</h1>
-    <p>
-        Manage your PhoneGuard account and delete your data.
-    </p>
-</header>
+        <!-- ══════════════════════════════════════════════════════════════════════
+             ENGLISH CONTENT
+             ══════════════════════════════════════════════════════════════════════ -->
+        <div id="content-en">
+            <p>Under Section 12 of the <strong>Digital Personal Data Protection (DPDP) Act, 2023</strong> and Google Play Developer Policies, you ("Data Principal") have the unequivocal right to request the permanent erasure of your personal data. <strong>PhoneGuard</strong> ensures that you can delete your entire account or selectively remove specific security records at any time.</p>
 
-<main>
+            <h2>1. Self-Service Account Deletion (In-App)</h2>
+            <p>You can execute an immediate, permanent account deletion directly within the PhoneGuard mobile app:</p>
+            <ol>
+                <li>Open the <strong>PhoneGuard</strong> application on your Android device.</li>
+                <li>Tap the <strong>Profile</strong> tab in the bottom navigation.</li>
+                <li>Scroll to the bottom of your profile settings.</li>
+                <li>Tap <strong>Delete Account</strong> (highlighted in red).</li>
+                <li>Enter your confirmation password or re-authenticate via Google.</li>
+                <li>Confirm deletion. Your account session will terminate immediately.</li>
+            </ol>
 
-    <!-- Introduction -->
-    <section>
-        <h2>Your Data, Your Control</h2>
+            <div class="success-box">
+                <strong>⚡ Instant Purge:</strong> When initiated in-app, your account profile, database documents, and cloud storage files are permanently deleted in real-time.
+            </div>
 
-        <p>
-            PhoneGuard provides users with options to delete their account
-            and associated data, as well as options to delete specific types
-            of data while keeping their account active.
-        </p>
+            <h2>2. External Deletion Request (Without the App)</h2>
+            <p>If you uninstalled the application, lost your device, or no longer have physical access to the phone, you can submit an official deletion request via our secure email portal:</p>
 
-        <p>
-            You can choose between <strong>full account deletion</strong>
-            and <strong>partial data deletion</strong>, depending on what
-            you want to remove.
-        </p>
-    </section>
+            <div class="delete-panel">
+                <h3>Submit an Account Deletion Request</h3>
+                <p>Send an email from your registered account email address to:</p>
+                <p><strong><a href="mailto:support@kyvronix.com?subject=PhoneGuard%20Account%20Deletion%20Request">support@kyvronix.com</a></strong> or <strong><a href="mailto:grievance@kyvronix.com?subject=DPDP%20Right%20to%20Erasure%20Request">grievance@kyvronix.com</a></strong></p>
+                <p><strong>Required Details:</strong></p>
+                <ul>
+                    <li>Your registered email address and mobile number.</li>
+                    <li>Subject Line: <em>PhoneGuard Account Deletion Request (DPDP Act Sec 12)</em></li>
+                </ul>
+                <a class="btn-delete" href="mailto:support@kyvronix.com?subject=PhoneGuard%20Account%20Deletion%20Request">Send Deletion Request Email</a>
+            </div>
 
+            <div class="alert-box">
+                <strong>⚠️ Processing Timeline &amp; Verification:</strong> Email deletion requests are verified within 48 hours to confirm ownership and processed completely within 7 business days in compliance with statutory guidelines.
+            </div>
 
-    <!-- Full Account Deletion -->
-    <section>
-        <h2>1. Delete Your PhoneGuard Account</h2>
+            <h2>3. Exact Data Deleted During Account Erasure</h2>
+            <p>When an account deletion is completed, PhoneGuard permanently and irreversibly wipes all associated records from our Firebase and Google Cloud servers:</p>
+            <ul>
+                <li><strong>Profile &amp; Identity Records:</strong> Name, registered email address, mobile number, and Firebase Auth UID.</li>
+                <li><strong>Hardware &amp; SIM Telemetry:</strong> SIM slot records, carrier identity, <strong>ICCID (SIM chip serial number)</strong>, and detected swapped phone numbers.</li>
+                <li><strong>Intruder Photographic Evidence:</strong> All front-camera intruder selfie images stored in your encrypted cloud storage container.</li>
+                <li><strong>Emergency Contacts:</strong> All telephone numbers saved in your Trusted Numbers list.</li>
+                <li><strong>Location &amp; Network History:</strong> Historical GPS coordinates, cell tower telemetry (CID/LAC), and incident map logs.</li>
+                <li><strong>Security Activity Logs:</strong> Command execution history, siren triggers, and remote lock events.</li>
+            </ul>
 
-        <p>
-            If you want to permanently delete your PhoneGuard account,
-            you can initiate the deletion directly from the PhoneGuard app.
-        </p>
+            <h2>4. Selective / Partial Data Deletion (Without Closing Account)</h2>
+            <p>You do not need to delete your entire PhoneGuard account if you only want to remove specific security records. You can selectively delete individual data items inside the app or dashboard:</p>
+            <ul>
+                <li><strong>Intrusion Photos:</strong> Tap the <em>Intrusion Alerts</em> tab &rarr; view photos &rarr; tap the <em>Delete</em> icon to permanently wipe evidence photos from cloud storage.</li>
+                <li><strong>Trusted Contacts:</strong> Go to <em>Security Settings &rarr; Trusted Numbers</em> &rarr; tap the delete icon next to any number to purge it from our servers.</li>
+                <li><strong>Activity Logs:</strong> Go to the <em>Logs</em> screen &rarr; tap <em>Clear All Activity</em> to purge past event logs.</li>
+            </ul>
 
-        <h3>Delete your account from the app</h3>
-
-        <ol>
-            <li>Open the PhoneGuard application.</li>
-            <li>Go to the <strong>Profile</strong> screen.</li>
-            <li>Scroll to the bottom of the Profile screen.</li>
-            <li>Select <strong>Delete Account</strong>.</li>
-            <li>Follow the confirmation steps shown by the application.</li>
-        </ol>
-
-        <div class="success">
-            <strong>What happens after account deletion?</strong>
-
-            <p>
-                When your account is deleted, the user account and
-                associated user data stored in the PhoneGuard database
-                will be deleted.
-            </p>
-        </div>
-    </section>
-
-
-    <!-- External Account Deletion -->
-    <section>
-        <h2>2. Request Account Deletion Without the App</h2>
-
-        <p>
-            If you no longer have access to the PhoneGuard application,
-            you can request deletion of your PhoneGuard account and
-            associated data by contacting us using the deletion contact
-            below.
-        </p>
-
-        <div class="delete-box">
-
-            <h3>Request Account Deletion</h3>
-
-            <p>
-                Send an account deletion request to:
-            </p>
-
-            <p>
-                <strong>
-                    <a href="mailto:support@kyvronix.com">
-                        support@kyvronix.com
-                    </a>
-                </strong>
-            </p>
-
-            <p>
-                Please use the email address associated with your
-                PhoneGuard account where possible. This helps us verify
-                the account and process the request securely.
-            </p>
-
-            <a
-                class="delete-button"
-                href="mailto:support@kyvronix.com?subject=PhoneGuard%20Account%20Deletion%20Request"
-            >
-                Request Account Deletion
-            </a>
-
+            <h2>5. Statutory DPDP Act Rights &amp; Grievance Escalation</h2>
+            <p>If you encounter any difficulty with account deletion or have questions regarding your data rights under the DPDP Act 2023:</p>
+            <ul>
+                <li><strong>Grievance Officer:</strong> Kyvronix Technologies Data Privacy Officer</li>
+                <li><strong>Direct Email:</strong> <a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></li>
+                <li><strong>Escalation:</strong> In accordance with Section 13(3) of the DPDP Act, 2023, you have the right to approach the <strong>Data Protection Board of India (DPBI)</strong> if your grievance is unresolved.</li>
+            </ul>
         </div>
 
-        <div class="important">
-            <strong>Important:</strong>
-            Account deletion is permanent. Once the deletion has been
-            completed, the account and associated PhoneGuard user data
-            cannot be restored.
+        <!-- ══════════════════════════════════════════════════════════════════════
+             HINDI CONTENT (हिंदी संस्करण)
+             ══════════════════════════════════════════════════════════════════════ -->
+        <div id="content-hi" style="display: none;">
+            <p><strong>डिजिटल व्यक्तिगत डेटा संरक्षण (DPDP) अधिनियम, 2023</strong> की धारा 12 और Google Play नीतियों के तहत, आपको ("डेटा प्रिंसिपल") अपना व्यक्तिगत डेटा स्थायी रूप से मिटाने (Right to Erasure) का पूर्ण अधिकार है। <strong>PhoneGuard</strong> में आप अपना पूरा खाता या विशिष्ट डेटा कभी भी हटा सकते हैं।</p>
+
+            <h2>1. ऐप के अंदर से खाता हटाना (Self-Service)</h2>
+            <p>आप PhoneGuard ऐप से सीधे अपना खाता स्थायी रूप से मिटा सकते हैं:</p>
+            <ol>
+                <li>अपने एंड्रॉइड फोन में <strong>PhoneGuard</strong> ऐप खोलें।</li>
+                <li>नीचे दिए गए नेविगेशन में <strong>Profile</strong> पर जाएं।</li>
+                <li>स्क्रीन में नीचे स्क्रॉल करें।</li>
+                <li>लाल रंग में दिए गए <strong>Delete Account</strong> बटन पर टैप करें।</li>
+                <li>पासवर्ड या गूगल खाते से पुष्टि करें।</li>
+                <li>हटाने की पुष्टि करें। आपका खाता तुरंत और स्थायी रूप से मिटा दिया जाएगा।</li>
+            </ol>
+
+            <div class="success-box">
+                <strong>⚡ तत्काल विलोपन:</strong> ऐप द्वारा खाता हटाने पर आपकी प्रोफ़ाइल, स्थान इतिहास, तस्वीरें और सिम रिकॉर्ड तुरंत सर्वर से पूरी तरह मिटा दिए जाते हैं।
+            </div>
+
+            <h2>2. ऐप के बिना खाता हटाने का अनुरोध (ईमेल द्वारा)</h2>
+            <p>यदि आपने ऐप हटा दिया है या आपका फोन खो चुका है, तो आप ईमेल द्वारा खाता हटाने का अनुरोध भेज सकते हैं:</p>
+
+            <div class="delete-panel">
+                <h3>खाता हटाने का ईमेल अनुरोध भेजें</h3>
+                <p>अपने पंजीकृत ईमेल पते से निम्नलिखित पते पर ईमेल भेजें:</p>
+                <p><strong><a href="mailto:support@kyvronix.com?subject=PhoneGuard%20Account%20Deletion%20Request">support@kyvronix.com</a></strong> या <strong><a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></strong></p>
+                <p><strong>आवश्यक जानकारी:</strong></p>
+                <ul>
+                    <li>आपका पंजीकृत ईमेल पता और मोबाइल नंबर।</li>
+                    <li>विषय (Subject): <em>PhoneGuard Account Deletion Request (DPDP Act)</em></li>
+                </ul>
+                <a class="btn-delete" href="mailto:support@kyvronix.com?subject=PhoneGuard%20Account%20Deletion%20Request">ईमेल द्वारा खाता हटाने का अनुरोध भेजें</a>
+            </div>
+
+            <h2>3. खाता हटाने पर कौन सा डेटा मिटाया जाता है?</h2>
+            <ul>
+                <li><strong>प्रोफ़ाइल डेटा:</strong> नाम, पंजीकृत ईमेल, मोबाइल नंबर और यूआईडी।</li>
+                <li><strong>हार्डवेयर और सिम टेलीमेट्री:</strong> सिम स्लॉट विवरण, ऑपरेटर का नाम, <strong>ICCID (सिम सीरियल नंबर)</strong> और नया सिम नंबर।</li>
+                <li><strong>इंट्रूज़न तस्वीरें:</strong> क्लाउड स्टोरेज में संग्रहीत सभी फ्रंट-कैमरा तस्वीरें।</li>
+                <li><strong>आपातकालीन संपर्क:</strong> आपके द्वारा जोड़े गए सभी विश्वसनीय नंबर।</li>
+                <li><strong>स्थान इतिहास:</strong> GPS निर्देशांक और सेल टावर विवरण।</li>
+                <li><strong>गतिविधि लॉग:</strong> सायरन, लॉक और ट्रैकिंग का पूरा इतिहास।</li>
+            </ul>
+
+            <h2>4. आंशिक डेटा हटाना (खाता चालू रखते हुए)</h2>
+            <ul>
+                <li><strong>तस्वीरें हटाना:</strong> ऐप में <em>Intrusion Alerts</em> में जाकर किसी भी फोटो को कभी भी मिटाया जा सकता है।</li>
+                <li><strong>नंबर हटाना:</strong> <em>Trusted Numbers</em> में जाकर किसी भी नंबर को हटाया जा सकता है।</li>
+                <li><strong>लॉग साफ़ करना:</strong> <em>Logs</em> स्क्रीन पर जाकर पूरा गतिविधि इतिहास साफ़ किया जा सकता है।</li>
+            </ul>
+
+            <h2>5. शिकायत निवारण और DPBI अपील</h2>
+            <p>किसी भी समस्या के लिए हमारे शिकायत अधिकारी से संपर्क करें: <strong><a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></strong>। असंतुष्ट होने पर आपको <strong>भारतीय डेटा संरक्षण बोर्ड (DPBI)</strong> के समक्ष शिकायत दर्ज करने का वैधानिक अधिकार है।</p>
         </div>
-    </section>
 
-
-    <!-- Partial Data Deletion -->
-    <section>
-        <h2>3. Delete Specific Data Without Deleting Your Account</h2>
-
-        <p>
-            You do not need to delete your entire PhoneGuard account
-            to remove individual types of data. PhoneGuard provides
-            options to delete certain data while keeping your account.
-        </p>
-
-        <h3>Intrusion Photos</h3>
-
-        <p>
-            Users can delete intrusion photos captured and stored by
-            PhoneGuard. Deleting an intrusion photo removes that photo
-            from the user's PhoneGuard data.
-        </p>
-
-        <h3>Trusted Numbers</h3>
-
-        <p>
-            Users can remove mobile numbers that they have added to
-            their trusted number list. Removing a trusted number deletes
-            that number from the user's trusted-number data.
-        </p>
-
-        <h3>Activity Logs</h3>
-
-        <p>
-            Users can delete their PhoneGuard activity logs. Deleting
-            activity logs removes the selected activity-log data
-            associated with the user's account.
-        </p>
-
-        <div class="success">
-            <strong>Partial deletion does not delete your account.</strong>
-
-            <p>
-                Your PhoneGuard account remains active when you delete
-                individual data such as intrusion photos, trusted
-                numbers, or activity logs.
-            </p>
+        <div class="footer-note">
+            &copy; 2026 PhoneGuard by Kyvronix Technologies. All rights reserved. | <a href="../privacy-policy/index.html">Privacy Policy &amp; DPDP Notice</a>
         </div>
-    </section>
+    </div>
 
+    <script>
+        function switchLanguage(lang) {
+            const contentEn = document.getElementById('content-en');
+            const contentHi = document.getElementById('content-hi');
+            const btnEn = document.getElementById('btn-en');
+            const btnHi = document.getElementById('btn-hi');
+            const titleText = document.getElementById('title-text');
+            const subtitleText = document.getElementById('subtitle-text');
 
-    <!-- What Gets Deleted -->
-    <section>
-        <h2>4. Data Deleted During Account Deletion</h2>
-
-        <p>
-            When a user requests full PhoneGuard account deletion,
-            PhoneGuard deletes the user account and associated user
-            data stored in the PhoneGuard database.
-        </p>
-
-        <p>
-            This includes the applicable user data associated with the
-            PhoneGuard account, including data that the user could
-            otherwise delete individually through the application.
-        </p>
-
-        <ul>
-            <li>PhoneGuard user account information</li>
-            <li>Intrusion photos associated with the account</li>
-            <li>Trusted mobile numbers associated with the account</li>
-            <li>Activity logs associated with the account</li>
-            <li>Other user data associated with the account and stored in the PhoneGuard database</li>
-        </ul>
-    </section>
-
-
-    <!-- Deletion Requests -->
-    <section>
-        <h2>5. Deletion Requests</h2>
-
-        <p>
-            We process account and data deletion requests within a
-            reasonable period after the request is verified.
-        </p>
-
-        <p>
-            If additional information is required to verify that a
-            deletion request was submitted by the account owner, we
-            may contact the requester using the provided contact
-            information.
-        </p>
-
-        <p>
-            If applicable law requires certain information to be
-            retained, such information may be retained only for the
-            legally required purpose and period. Any such retention
-            will be handled in accordance with applicable law and the
-            PhoneGuard Privacy Policy.
-        </p>
-    </section>
-
-</main>
-
-
-<footer>
-    <p>
-        &copy; 2026 PhoneGuard. All rights reserved.
-    </p>
-
-    <p>
-        This page provides information about PhoneGuard account and
-        data deletion.
-    </p>
-</footer>
-
+            if (lang === 'hi') {
+                contentEn.style.display = 'none';
+                contentHi.style.display = 'block';
+                btnEn.classList.remove('active');
+                btnHi.classList.add('active');
+                titleText.textContent = 'खाता एवं डेटा विलोपन नीति';
+                subtitleText.textContent = 'अपने व्यक्तिगत डेटा, रिकॉर्ड और क्लाउड स्टोरेज पर पूर्ण नियंत्रण।';
+            } else {
+                contentEn.style.display = 'block';
+                contentHi.style.display = 'none';
+                btnHi.classList.remove('active');
+                btnEn.classList.add('active');
+                titleText.textContent = 'Account & Data Deletion';
+                subtitleText.textContent = 'Complete control over your personal data, records, and cloud storage.';
+            }
+        }
+    </script>
 </body>
 </html>

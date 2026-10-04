@@ -3,153 +3,522 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - PhoneGuard: Lost Phone Finder</title>
+    <title>Privacy Policy - PhoneGuard: Lost Phone Recovery</title>
+    <meta name="description" content="Official Privacy Policy and Data Protection Notice for PhoneGuard: Lost Phone Finder, compliant with the Digital Personal Data Protection (DPDP) Act, 2023.">
     <style>
         :root {
             --primary: #1a73e8;
             --primary-dark: #1557b0;
+            --primary-light: #e8f0fe;
             --bg-body: #f8f9fa;
             --bg-card: #ffffff;
-            --text-main: #3c4043;
+            --text-main: #202124;
             --text-secondary: #5f6368;
-            --accent-blue: #e8f0fe;
+            --border-color: #e0e0e0;
+            --accent-success: #0f9d58;
+            --accent-warning: #ea8600;
         }
+        * { box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
             color: var(--text-main);
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
             background-color: var(--bg-body);
+            margin: 0;
+            padding: 30px 16px;
         }
         .container {
+            max-width: 920px;
+            margin: 0 auto;
             background: var(--bg-card);
-            padding: 50px;
+            padding: 45px 50px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
         }
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
             border-bottom: 2px solid #f1f3f4;
-            padding-bottom: 30px;
+            padding-bottom: 25px;
+            position: relative;
         }
-        h1 { color: var(--primary); font-size: 2.5em; margin-bottom: 10px; font-weight: 800; }
-        h2 { color: #202124; margin-top: 40px; font-size: 1.5em; display: flex; align-items: center; }
-        h2::before { content: ""; display: inline-block; width: 4px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 2px; }
-        h3 { color: var(--primary-dark); margin-top: 25px; font-size: 1.2em; }
-        p, li { color: var(--text-secondary); font-size: 1.05em; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 12px; }
-        .last-updated { color: #70757a; font-size: 0.95em; font-weight: 500; }
-        .permission-card {
-            background: #fdfcfe;
-            border: 1px solid #f1eefd;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 15px;
+        .lang-switch {
+            display: inline-flex;
+            background: #e8eaed;
+            padding: 4px;
+            border-radius: 30px;
+            margin-bottom: 20px;
         }
-        .contact {
-            background: var(--accent-blue);
-            padding: 30px;
-            border-radius: 12px;
-            margin-top: 50px;
-            border: 1px solid #d2e3fc;
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 700;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .contact strong { color: var(--primary-dark); font-size: 1.1em; }
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(26,115,232,0.3);
+        }
         .badge {
             display: inline-block;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
-            background: var(--accent-blue);
+            background: var(--primary-light);
             color: var(--primary);
-            font-size: 0.85em;
-            font-weight: 700;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             margin-bottom: 10px;
         }
-        @media (max-width: 600px) {
-            .container { padding: 25px; }
+        h1 {
+            color: var(--primary-dark);
+            font-size: 2.3em;
+            margin: 10px 0 5px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .effective-date {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+        h2 {
+            color: #1a1a1a;
+            margin-top: 35px;
+            font-size: 1.35em;
+            display: flex;
+            align-items: center;
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+        h3 {
+            color: var(--primary-dark);
+            margin-top: 22px;
+            font-size: 1.12em;
+            font-weight: 700;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1em;
+        }
+        ul, ol {
+            padding-left: 22px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .compliance-box {
+            background: #f0f7ff;
+            border: 1px solid #c7e0ff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 20px 0;
+            font-size: 0.96em;
+        }
+        .compliance-box strong {
+            color: var(--primary-dark);
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px 14px;
+            text-align: left;
+        }
+        .data-table th {
+            background: #f1f3f4;
+            color: #202124;
+            font-weight: 700;
+        }
+        .data-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+        .card-highlight {
+            background: #fdfcfe;
+            border: 1px solid #e8eaed;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 15px 0;
+        }
+        .guarantee-box {
+            background: #e6f4ea;
+            border: 1px solid #b7e1cd;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .guarantee-box h3 {
+            color: var(--accent-success);
+            margin-top: 0;
+        }
+        .grievance-card {
+            background: #f8f9fa;
+            border: 2px solid #d2e3fc;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 35px;
+        }
+        .grievance-card h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 0.88em;
+            color: #80868b;
+            margin-top: 40px;
+            border-top: 1px solid #e8eaed;
+            padding-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 20px; }
             h1 { font-size: 1.8em; }
+            .data-table { display: block; overflow-x: auto; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="badge">SECURE & PRIVATE</div>
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Effective Date: May 8, 2026</p>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-en" onclick="switchLanguage('en')">English</button>
+                <button class="lang-btn" id="btn-hi" onclick="switchLanguage('hi')">हिंदी (Hindi)</button>
+            </div>
+            <br>
+            <div class="badge">DPDP ACT 2023 COMPLIANT • SECURE &amp; PRIVATE</div>
+            <h1 id="title-text">Privacy Policy &amp; Data Protection Notice</h1>
+            <p class="effective-date" id="date-text">Last Updated &amp; Effective Date: October 4, 2026</p>
         </header>
 
-        <p><strong>PhoneGuard: Lost Phone Finder</strong> ("we," "us," or "our") is dedicated to providing industry-leading anti-theft and device recovery solutions. This Privacy Policy outlines our commitment to transparency regarding the collection, usage, and protection of your data while using the PhoneGuard mobile application (the "App").</p>
+        <!-- ══════════════════════════════════════════════════════════════════════
+             ENGLISH CONTENT
+             ══════════════════════════════════════════════════════════════════════ -->
+        <div id="content-en">
+            <div class="compliance-box">
+                <strong>Statutory Notice under the Digital Personal Data Protection (DPDP) Act, 2023:</strong><br>
+                This Privacy Policy serves as the mandatory itemized notice under Section 5 and Section 6 of the DPDP Act, 2023. By using <strong>PhoneGuard: Lost Phone Recovery</strong> (the "App"), you ("Data Principal") are informed about the collection, processing, purpose, storage, and rights associated with your digital personal data processed by <strong>Kyvronix Technologies</strong> ("Data Fiduciary").
+            </div>
 
-        <h2>1. Information We Collect</h2>
-        <p>To provide a functional security suite that can recover your device, we collect the following:</p>
+            <p><strong>PhoneGuard: Lost Phone Recovery</strong> is dedicated to providing lost mobile recovery and anti-theft defense. We operate under strict principles of <em>Data Minimization</em>, <em>Purpose Limitation</em>, and <em>Affirmative Consent</em>. We do not sell personal data, do not profile users for behavioral advertising, and only process telemetry necessary to safeguard your device.</p>
 
-        <h3>A. Personal Identity Data</h3>
-        <ul>
-            <li><strong>Account Profile:</strong> We collect your name, email address, and mobile number to synchronize your security settings across devices.</li>
-            <li><strong>Trusted Contacts:</strong> You manually provide mobile numbers of friends or family. These are stored locally and in your private cloud to receive automated emergency alerts.</li>
-        </ul>
-
-        <h3>B. Critical Security Data (High Sensitivity)</h3>
-        <div class="permission-card">
+            <h2>1. Identity of the Data Fiduciary</h2>
+            <p>The entity determining the purpose and means of processing your personal data is:</p>
             <ul>
-                <li><strong>Precise Location Data:</strong> We collect GPS location data (including in the background) to allow you to track your device if it is lost. This is only triggered when you or an authorized command initiates a "Track" request.</li>
-                <li><strong>Intruder Images:</strong> The App captures front-camera photos silently when a failed unlock attempt occurs or via remote command. These are stored securely in your private cloud.</li>
-                <li><strong>Notification & Chat Monitoring:</strong> The App monitors incoming notifications from messaging apps (like Google Messages or WhatsApp) for your unique "Trigger Keyword." We do not read, store, or transmit your personal conversations.</li>
+                <li><strong>Entity:</strong> Kyvronix Technologies ("Company", "we", "us", or "our")</li>
+                <li><strong>Application:</strong> PhoneGuard: Lost Phone Recovery</li>
+                <li><strong>Official Support Email:</strong> <a href="mailto:support@kyvronix.com">support@kyvronix.com</a></li>
+                <li><strong>Grievance Officer Email:</strong> <a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></li>
+                <li><strong>Jurisdiction:</strong> Republic of India</li>
             </ul>
+
+            <h2>2. Itemized Categories of Personal Data Collected</h2>
+            <p>In accordance with Section 5 of the DPDP Act, the table below provides an itemized breakdown of each category of data processed, the collection trigger, and the specific lawful recovery purpose:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data Category</th>
+                        <th>Specific Data Elements Processed</th>
+                        <th>Purpose of Processing</th>
+                        <th>Lawful Basis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>User Profile</strong></td>
+                        <td>Name, Email Address, Registered Mobile Number, Firebase User Identifier (UID).</td>
+                        <td>Account authentication, synchronizing security settings across devices, and accessing the Web Recovery Dashboard.</td>
+                        <td>Consent (Section 6)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emergency Contacts</strong></td>
+                        <td>Mobile numbers designated by you as "Trusted Numbers".</td>
+                        <td>Dispatching automated emergency recovery SMS alerts (containing GPS links and battery status) upon verified trigger commands.</td>
+                        <td>Consent (Section 6)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Real-Time Location</strong></td>
+                        <td>High-accuracy GPS coordinates, altitude, accuracy radius, and background location.</td>
+                        <td>Locating and tracking your lost or stolen device on a live map 24/7, even when the screen is locked or the app is closed.</td>
+                        <td>Explicit Consent &amp; Runtime Permission</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cell Tower Telemetry</strong></td>
+                        <td>Cell ID (CID), Location Area Code (LAC), Mobile Country Code (MCC), Mobile Network Code (MNC).</td>
+                        <td>Fallback location triangulation when GPS is disabled by an intruder or unavailable indoors.</td>
+                        <td>Legitimate Security Purpose</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SIM &amp; ICCID Telemetry</strong></td>
+                        <td>SIM Slot Index, Carrier Name, Subscription ID, <strong>ICCID (SIM Chip Hardware Serial Number)</strong>, and detected swapped mobile number.</td>
+                        <td>Detecting unauthorized SIM card swapping, alerting trusted contacts immediately, and logging SIM hardware changes to your secure dashboard.</td>
+                        <td>Legitimate Security Purpose &amp; Consent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intrusion Photos</strong></td>
+                        <td>Front-camera photographs silently captured during failed screen unlock attempts (PIN/pattern/biometric) or upon remote "Photo" trigger.</td>
+                        <td>Generating photographic evidence of the unauthorized person possessing your phone and uploading it to your private dashboard.</td>
+                        <td>Explicit Consent &amp; Camera Permission</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Message Keyword Matching</strong></td>
+                        <td>Temporary in-memory inspection of incoming notification text strictly for your pre-configured secret trigger keyword.</td>
+                        <td>Executing remote commands (Siren, Lock, GPS locate) over RCS and SMS. <strong>Note: Personal conversations, OTPs, and sender chats are never stored, read, or transmitted.</strong></td>
+                        <td>Explicit Consent &amp; Notification Access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Payment &amp; Subscription</strong></td>
+                        <td>Google Play purchase token, order ID, product identifier.</td>
+                        <td>Fulfilling premium subscriptions via the official Google Play In-App Billing library. (We never access or store credit cards or banking details).</td>
+                        <td>Contractual Fulfillment</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>3. Android System Permissions &amp; Prominent Disclosures</h2>
+            <p>In adherence to both Google Play Developer Policies and the DPDP Act, PhoneGuard displays prominent in-app disclosure dialogs before requesting sensitive device capabilities:</p>
+            <ul>
+                <li><strong>Device Administrator Permission:</strong> Required strictly for <em>Remote Screen Lock</em> (to protect personal photos and banking apps from thieves) and <em>Anti-Theft Uninstall Defense</em> (preventing thieves from uninstalling PhoneGuard to kill tracking).</li>
+                <li><strong>Background Location Permission:</strong> Required so you can locate your phone 24/7 if lost, even when the application is not actively open.</li>
+                <li><strong>Camera Permission:</strong> Required strictly to capture evidence photographs when an unauthorized person repeatedly fails to unlock your phone.</li>
+                <li><strong>Notification Listener &amp; Default SMS Support:</strong> Required to intercept emergency trigger keywords sent via RCS or SMS without delay.</li>
+            </ul>
+
+            <h2>4. Third-Party Data Processors &amp; Cross-Border Transfers</h2>
+            <p>To provide reliable, high-availability security infrastructure, we engage the following trusted third-party Data Processors:</p>
+            <ul>
+                <li><strong>Google Cloud &amp; Firebase (Google LLC):</strong> Cloud Firestore, Firebase Authentication, and Cloud Storage for secure account syncing, encrypted photo storage, and authentication. Data is processed adhering to ISO/IEC 27001, SOC 1/2/3, and GDPR/DPDP-compliant data processing agreements.</li>
+                <li><strong>Google Play Billing (Google LLC):</strong> Secure in-app purchase validation.</li>
+                <li><strong>Google AdMob (Google LLC):</strong> Displays privacy-compliant banner ads in the free version. Personalized ads may be disabled in Google account settings.</li>
+                <li><strong>Firebase Crashlytics (Google LLC):</strong> Anonymized crash telemetry to diagnose bugs and improve stability.</li>
+            </ul>
+            <p>Any cross-border transfer of digital personal data complies with Section 16 of the DPDP Act and is restricted to jurisdictions permitted under applicable Indian Government notifications.</p>
+
+            <h2>5. Data Retention &amp; Storage Limitation Policy (Section 8(7))</h2>
+            <p>Under the DPDP Act principle of <em>Storage Limitation</em>, personal data is retained only as long as necessary to satisfy the purpose for which it was collected:</p>
+            <ul>
+                <li><strong>Active Account Data:</strong> Your profile settings, trusted numbers, and current SIM configuration are retained while your PhoneGuard account remains active.</li>
+                <li><strong>Intrusion Photos &amp; Logs:</strong> Intruder photos and activity logs are stored in your encrypted cloud container. You may delete individual photos or logs at any time from the app or dashboard.</li>
+                <li><strong>Account Deletion Purge:</strong> When you delete your account, all personal data—including profile info, trusted numbers, GPS logs, intruder photos, and SIM/ICCID records—is <strong>permanently and irreversibly wiped</strong> from our database immediately.</li>
+            </ul>
+
+            <h2>6. Protection of Children’s Personal Data (Section 9)</h2>
+            <p>PhoneGuard is designed as an anti-theft tool for device owners. In strict compliance with Section 9 of the DPDP Act:</p>
+            <ul>
+                <li>We do not knowingly collect personal data from or target services to minors under 18 years of age without parental oversight.</li>
+                <li>We do <strong>not</strong> engage in behavioral tracking, profiling, or targeted advertising directed at children.</li>
+                <li>We do not process any data that could cause detrimental effects on the well-being of a child.</li>
+            </ul>
+
+            <h2>7. Statutory Rights of the Data Principal (Sections 11, 12 &amp; 14)</h2>
+            <p>Under Chapter III of the DPDP Act, 2023, you are endowed with enforceable statutory rights regarding your digital personal data:</p>
+            <ol>
+                <li><strong>Right to Access Information (Section 11):</strong> You have the right to obtain a summary of your personal data processed by us and the list of third-party processors with whom it has been shared.</li>
+                <li><strong>Right to Correction &amp; Erasure (Section 12):</strong> You have the right to correct inaccurate data, update incomplete records, and request the complete erasure of your personal data.</li>
+                <li><strong>Right to Withdraw Consent (Section 6(4)):</strong> You may withdraw your consent at any time as easily as it was given, by toggling off permissions, turning off specific features, or deleting your account.</li>
+                <li><strong>Right of Grievance Redressal (Section 13):</strong> You have the right to register a grievance with our designated Grievance Officer regarding any matter relating to your personal data.</li>
+                <li><strong>Right to Nominate (Section 14):</strong> You have the statutory right to designate another individual who shall, in the event of your death or incapacity, exercise your rights as a Data Principal under the DPDP Act.</li>
+            </ol>
+
+            <div class="guarantee-box">
+                <h3>🛡️ Our Privacy &amp; Security Guarantee</h3>
+                <p>PhoneGuard strictly adheres to end-to-end transport encryption (TLS 1.3) and AES-256 cloud encryption at rest. We never sell your personal data, never monitor your private calls or chats, and never trigger camera or screen lock actions without your verified authorization.</p>
+            </div>
+
+            <div class="grievance-card">
+                <h3>8. Grievance Redressal Mechanism &amp; Officer Details (Section 8(9) &amp; 13)</h3>
+                <p>If you have any questions, concerns, or grievances regarding the processing of your personal data or wish to exercise your statutory rights (including nomination or erasure), you may contact our designated <strong>Grievance Redressal Officer</strong>:</p>
+                <ul>
+                    <li><strong>Designation:</strong> Grievance Officer, Data Privacy &amp; Cybersecurity</li>
+                    <li><strong>Company:</strong> Kyvronix Technologies</li>
+                    <li><strong>Grievance Email:</strong> <a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></li>
+                    <li><strong>Support Email:</strong> <a href="mailto:support@kyvronix.com">support@kyvronix.com</a></li>
+                    <li><strong>Statutory Acknowledgment:</strong> Within 48 hours</li>
+                    <li><strong>Resolution Timeline:</strong> Within 30 days of receiving the grievance</li>
+                </ul>
+
+                <h3>9. Escalation to the Data Protection Board of India (DPBI)</h3>
+                <p>In accordance with Section 13(3) of the DPDP Act, if you are not satisfied with the resolution provided by our Grievance Officer or if a response is not received within 30 days, you have the statutory right to file a formal complaint with the <strong>Data Protection Board of India</strong>:</p>
+                <ul>
+                    <li><strong>Regulatory Authority:</strong> Data Protection Board of India (DPBI)</li>
+                    <li><strong>Ministry:</strong> Ministry of Electronics and Information Technology (MeitY), Government of India</li>
+                    <li><strong>Website:</strong> <a href="https://www.meity.gov.in" target="_blank" rel="noopener">www.meity.gov.in</a></li>
+                </ul>
+            </div>
         </div>
 
-        <h3>C. Payment & Subscription Data</h3>
-        <ul>
-            <li><strong>Google Play Billing:</strong> We use the official Google Play In-App Billing system to manage premium subscriptions. We do not see or store your credit card details; all payments are processed securely by Google.</li>
-        </ul>
+        <!-- ══════════════════════════════════════════════════════════════════════
+             HINDI CONTENT (हिंदी संस्करण)
+             ══════════════════════════════════════════════════════════════════════ -->
+        <div id="content-hi" style="display: none;">
+            <div class="compliance-box">
+                <strong>डिजिटल व्यक्तिगत डेटा संरक्षण (DPDP) अधिनियम, 2023 के तहत वैधानिक सूचना:</strong><br>
+                यह गोपनीयता नीति DPDP अधिनियम, 2023 की धारा 5 और धारा 6 के तहत अनिवार्य मदवार (Itemized) सूचना है। <strong>PhoneGuard: Lost Phone Recovery</strong> (ऐप) का उपयोग करके, आप ("डेटा प्रिंसिपल") <strong>Kyvronix Technologies</strong> ("डेटा फिड्यूशरी") द्वारा संसाधित अपने डिजिटल व्यक्तिगत डेटा, उद्देश्य, सुरक्षा और अपने कानूनी अधिकारों के बारे में सूचित हैं।
+            </div>
 
-        <h2>2. How We Use Your Data</h2>
-        <ul>
-            <li><strong>Remote Recovery:</strong> Sending location links to your trusted contacts via auto-reply to chat messages.</li>
-            <li><strong>Theft Deterrence:</strong> Triggering remote alarms and system-level screen locks.</li>
-            <li><strong>Evidence Generation:</strong> Providing intruder photos for potential legal or police recovery actions.</li>
-            <li><strong>Account Security:</strong> Verifying your identity during Web Dashboard login.</li>
-        </ul>
+            <p><strong>PhoneGuard: Lost Phone Recovery</strong> खोए हुए फोन की रिकवरी और चोरी से सुरक्षा प्रदान करने के लिए प्रतिबद्ध है। हम <em>डेटा न्यूनतमकरण (Data Minimization)</em>, <em>उद्देश्य सीमा (Purpose Limitation)</em> और <em>स्पष्ट सहमति</em> के सिद्धांतों पर कार्य करते हैं। हम व्यक्तिगत डेटा नहीं बेचते हैं और केवल वही डेटा संसाधित करते हैं जो आपके फोन की सुरक्षा के लिए आवश्यक है।</p>
 
-        <h2>3. Third-Party Service Integration</h2>
-        <p>We partner with trusted infrastructure providers to ensure your data remains secure:</p>
-        <ul>
-            <li><strong>Google Firebase:</strong> Used for secure authentication, real-time database, and encrypted photo storage.</li>
-            <li><strong>Google AdMob:</strong> Used to display advertisements in the free version. Personalized ads can be disabled in your Google settings.</li>
-            <li><strong>Google Play Billing:</strong> Used for secure transaction processing and subscription management.</li>
-            <li><strong>Firebase Crashlytics:</strong> Used to identify and fix technical bugs for a stable experience.</li>
-        </ul>
+            <h2>1. डेटा फिड्यूशरी (कंपनी) का विवरण</h2>
+            <ul>
+                <li><strong>संस्था:</strong> Kyvronix Technologies ("कंपनी", "हम")</li>
+                <li><strong>एप्लिकेशन:</strong> PhoneGuard: Lost Phone Recovery</li>
+                <li><strong>आधिकारिक सहायता ईमेल:</strong> <a href="mailto:support@kyvronix.com">support@kyvronix.com</a></li>
+                <li><strong>शिकायत अधिकारी ईमेल:</strong> <a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></li>
+                <li><strong>क्षेत्राधिकार:</strong> भारत गणराज्य (Republic of India)</li>
+            </ul>
 
-        <h2>4. Android Permissions Disclosure</h2>
-        <p>Due to the nature of anti-theft software, the following permissions are mandatory for full protection:</p>
-        <ul>
-            <li><strong>Background Location:</strong> Used to locate your phone even when the app is closed.</li>
-            <li><strong>Notification Listener:</strong> Used to execute commands like 'Locate' or 'Alarm' by detecting chat messages from trusted contacts.</li>
-            <li><strong>Camera:</strong> Used to capture the 'Intruder Selfie'.</li>
-            <li><strong>Device Administrator:</strong> Used to enable remote screen locking and to <strong>prevent unauthorized uninstallation</strong> by a thief.</li>
-        </ul>
+            <h2>2. एकत्र किए गए व्यक्तिगत डेटा की मदवार श्रेणियां</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>डेटा श्रेणी</th>
+                        <th>संसाधित डेटा तत्व</th>
+                        <th>प्रसंस्करण का उद्देश्य</th>
+                        <th>कानूनी आधार</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>उपयोगकर्ता प्रोफ़ाइल</strong></td>
+                        <td>नाम, ईमेल पता, पंजीकृत मोबाइल नंबर, फायरबेस यूआईडी।</td>
+                        <td>खाता प्रमाणीकरण, सुरक्षा सेटिंग्स का समन्वय और वेब डैशबोर्ड तक पहुंच।</td>
+                        <td>सहमति (धारा 6)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>आपातकालीन संपर्क</strong></td>
+                        <td>आपके द्वारा जोड़े गए "विश्वसनीय नंबर" (Trusted Numbers)।</td>
+                        <td>ट्रिगर कमांड मिलने पर स्वचालित आपातकालीन SMS अलर्ट और मैप लिंक भेजना।</td>
+                        <td>सहमति (धारा 6)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>रियल-टाइम लोकेशन</strong></td>
+                        <td>सटीक GPS निर्देशांक, ऊंचाई, सटीकता दायरा और बैकग्राउंड लोकेशन।</td>
+                        <td>स्क्रीन लॉक होने या ऐप बंद होने पर भी 24/7 लाइव मैप पर खोए फोन को ट्रैक करना।</td>
+                        <td>स्पष्ट सहमति और रनटाइम अनुमति</td>
+                    </tr>
+                    <tr>
+                        <td><strong>सेल टावर टेलीमेट्री</strong></td>
+                        <td>सेल आईडी (CID), लोकेशन एरिया कोड (LAC), MCC, MNC।</td>
+                        <td>जब जीपीएस बंद हो या घर के अंदर सिग्नल न हो, तब टावर से अनुमानित स्थान का पता लगाना।</td>
+                        <td>वैध सुरक्षा उद्देश्य</td>
+                    </tr>
+                    <tr>
+                        <td><strong>सिम और ICCID टेलीमेट्री</strong></td>
+                        <td>सिम स्लॉट इंडेक्स, ऑपरेटर का नाम, <strong>ICCID (सिम चिप हार्डवेयर सीरियल नंबर)</strong> और नया सिम नंबर।</td>
+                        <td>सिम बदले जाने पर तुरंत पहचानना, अलर्ट भेजना और डैशबोर्ड पर सिम विवरण अपडेट करना।</td>
+                        <td>वैध सुरक्षा उद्देश्य और सहमति</td>
+                    </tr>
+                    <tr>
+                        <td><strong>इंट्रूज़न तस्वीरें</strong></td>
+                        <td>गलत स्क्रीन अनलॉक प्रयास होने पर फ्रंट कैमरे से ली गई गुप्त तस्वीर।</td>
+                        <td>फोन चुराने वाले व्यक्ति की पहचान का साक्ष्य जुटाना और डैशबोर्ड पर सुरक्षित अपलोड करना।</td>
+                        <td>स्पष्ट सहमति और कैमरा अनुमति</td>
+                    </tr>
+                    <tr>
+                        <td><strong>कीवर्ड पहचान</strong></td>
+                        <td>इनकमिंग नोटिफिकेशन में केवल आपके गुप्त ट्रिगर शब्द की पहचान करना।</td>
+                        <td>रिमोट सायरन, लॉक या लोकेशन कमांड चलाना। <strong>व्यक्तिगत चैट या OTP कभी नहीं पढ़े या सहेजे जाते।</strong></td>
+                        <td>स्पष्ट सहमति और नोटिफिकेशन अनुमति</td>
+                    </tr>
+                    <tr>
+                        <td><strong>भुगतान डेटा</strong></td>
+                        <td>गूगल प्ले टोकन, ऑर्डर आईडी।</td>
+                        <td>Google Play Billing द्वारा प्रीमियम सब्सक्रिप्शन का प्रबंधन (हम कार्ड या बैंक विवरण नहीं देखते)।</td>
+                        <td>संविदात्मक पूर्ति</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <h2>5. Your Rights & Data Control</h2>
-        <p>You have full control over your data. You may:</p>
-        <ul>
-            <li><strong>Access:</strong> View all stored logs and photos via the Web Dashboard or the App.</li>
-            <li><strong>Delete:</strong> You can permanently delete your account and all associated cloud data at any time through the "Profile" section. This action is irreversible.</li>
-            <li><strong>Opt-Out:</strong> You can disable any specific security feature (like Intruder Selfie) at any time.</li>
-        </ul>
+            <h2>3. एंड्रॉइड सिस्टम अनुमतियां और प्रकटीकरण</h2>
+            <ul>
+                <li><strong>डिवाइस एडमिनिस्ट्रेटर अनुमति:</strong> आपातकालीन रिमोट स्क्रीन लॉक और चोरों द्वारा ऐप को अनइंस्टॉल करने से रोकने के लिए आवश्यक।</li>
+                <li><strong>बैकग्राउंड लोकेशन:</strong> फोन खो जाने पर ऐप बंद होने के बावजूद 24/7 लोकेशन ट्रैक करने के लिए आवश्यक।</li>
+                <li><strong>कैमरा अनुमति:</strong> फोन अनलॉक करने के असफल प्रयासों के दौरान चोर की फोटो लेने के लिए आवश्यक।</li>
+                <li><strong>नोटिफिकेशन और डिफॉल्ट SMS:</strong> बिना देरी के RCS या SMS द्वारा रिकवरी कमांड तुरंत निष्पादित करने के लिए आवश्यक।</li>
+            </ul>
 
-        <h2>6. Data Safety Standards</h2>
-        <p>We use industry-standard SSL/TLS encryption for all data in transit. Your intruder photos and location history are stored in a private Firebase instance that only you can access using your authorized Google credentials.</p>
+            <h2>4. डेटा भंडारण और प्रतिधारण नीति (धारा 8(7))</h2>
+            <ul>
+                <li><strong>सक्रिय खाता:</strong> जब तक आपका खाता सक्रिय है, प्रोफ़ाइल और सिम विवरण सुरक्षित रूप से संग्रहीत रहते हैं।</li>
+                <li><strong>तस्वीरें और लॉग:</strong> आप ऐप या डैशबोर्ड से व्यक्तिगत तस्वीरों या लॉग को किसी भी समय मिटा सकते हैं।</li>
+                <li><strong>खाता विलोपन (Account Deletion):</strong> खाता हटाने पर आपकी प्रोफ़ाइल, स्थान इतिहास, तस्वीरें और सिम/ICCID विवरण <strong>तुरंत और स्थायी रूप से मिटा दिए जाते हैं</strong>।</li>
+            </ul>
 
-        <div class="contact">
-            <strong>Contact Our Security Team</strong><br>
-            If you have any questions regarding your data or this policy, please reach out to:<br>
-            <strong>support@kyvronix.com</strong>
+            <h2>5. बच्चों के व्यक्तिगत डेटा की सुरक्षा (धारा 9)</h2>
+            <ul>
+                <li>PhoneGuard 18 वर्ष से कम आयु के बच्चों को लक्षित नहीं करता है और न ही माता-पिता की सहमति के बिना उनका डेटा एकत्र करता है।</li>
+                <li>हम बच्चों के व्यवहार की ट्रैकिंग, प्रोफाइलिंग या विज्ञापनों में संलग्न <strong>नहीं</strong> होते हैं।</li>
+            </ul>
+
+            <h2>6. डेटा प्रिंसिपल के वैधानिक अधिकार (धारा 11, 12 और 14)</h2>
+            <ol>
+                <li><strong>सूचना तक पहुंच का अधिकार (धारा 11):</strong> अपने संसाधित डेटा का सारांश और तीसरे पक्ष के प्रोसेसर्स की सूची जानने का अधिकार।</li>
+                <li><strong>सुधार और मिटाने का अधिकार (धारा 12):</strong> गलत डेटा को सही कराने और अपना डेटा पूरी तरह मिटाने का अधिकार।</li>
+                <li><strong>सहमति वापस लेने का अधिकार (धारा 6(4)):</strong> किसी भी समय अनुमति बंद करके या खाता हटाकर सहमति वापस लेने का अधिकार।</li>
+                <li><strong>शिकायत निवारण का अधिकार (धारा 13):</strong> शिकायत अधिकारी के समक्ष डेटा संबंधी शिकायत दर्ज कराने का अधिकार।</li>
+                <li><strong>नामांकन का अधिकार (धारा 14):</strong> मृत्यु या अक्षमता की स्थिति में अपने डेटा अधिकारों का प्रयोग करने के लिए किसी अन्य व्यक्ति को नामांकित करने का कानूनी अधिकार।</li>
+            </ol>
+
+            <div class="grievance-card">
+                <h3>7. शिकायत निवारण अधिकारी का विवरण (धारा 8(9) और 13)</h3>
+                <p>किसी भी प्रश्न, सहमति वापसी या डेटा अधिकारों के प्रयोग के लिए हमारे <strong>शिकायत निवारण अधिकारी</strong> से संपर्क करें:</p>
+                <ul>
+                    <li><strong>पद:</strong> शिकायत अधिकारी (Grievance Officer), डेटा प्राइवेसी</li>
+                    <li><strong>कंपनी:</strong> Kyvronix Technologies</li>
+                    <li><strong>शिकायत ईमेल:</strong> <a href="mailto:grievance@kyvronix.com">grievance@kyvronix.com</a></li>
+                    <li><strong>सहायता ईमेल:</strong> <a href="mailto:support@kyvronix.com">support@kyvronix.com</a></li>
+                    <li><strong>प्राप्ति सूचना:</strong> 48 घंटों के भीतर</li>
+                    <li><strong>समाधान समय सीमा:</strong> शिकायत प्राप्ति के 30 दिनों के भीतर</li>
+                </ul>
+
+                <h3>8. भारतीय डेटा संरक्षण बोर्ड (DPBI) में अपील का अधिकार</h3>
+                <p>DPDP अधिनियम की धारा 13(3) के अनुसार, यदि आप शिकायत अधिकारी के समाधान से संतुष्ट नहीं हैं या 30 दिनों में उत्तर प्राप्त नहीं होता है, तो आपको <strong>भारतीय डेटा संरक्षण बोर्ड (Data Protection Board of India)</strong> के समक्ष औपचारिक शिकायत दर्ज करने का वैधानिक अधिकार है।</p>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            &copy; 2026 PhoneGuard by Kyvronix Technologies. All rights reserved. | <a href="../account-deletion/index.html">Account &amp; Data Deletion Policy</a>
         </div>
     </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const contentEn = document.getElementById('content-en');
+            const contentHi = document.getElementById('content-hi');
+            const btnEn = document.getElementById('btn-en');
+            const btnHi = document.getElementById('btn-hi');
+            const titleText = document.getElementById('title-text');
+            const dateText = document.getElementById('date-text');
+
+            if (lang === 'hi') {
+                contentEn.style.display = 'none';
+                contentHi.style.display = 'block';
+                btnEn.classList.remove('active');
+                btnHi.classList.add('active');
+                titleText.textContent = 'गोपनीयता नीति एवं डेटा संरक्षण सूचना';
+                dateText.textContent = 'अंतिम अद्यतन एवं प्रभावी तिथि: 4 अक्टूबर, 2026';
+            } else {
+                contentEn.style.display = 'block';
+                contentHi.style.display = 'none';
+                btnHi.classList.remove('active');
+                btnEn.classList.add('active');
+                titleText.textContent = 'Privacy Policy & Data Protection Notice';
+                dateText.textContent = 'Last Updated & Effective Date: October 4, 2026';
+            }
+        }
+    </script>
 </body>
 </html>
