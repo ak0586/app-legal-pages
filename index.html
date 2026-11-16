@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>App Legal & Privacy Information</title>
-
+    <title>App Legal &amp; Privacy Information</title>
     <meta
         name="description"
-        content="Privacy policies and account and data deletion resources for our mobile applications."
+        content="Privacy policies, terms of service, and account and data deletion resources for our mobile applications."
     >
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -31,16 +28,8 @@
             text-align: center;
         }
 
-        header h1 {
-            margin: 0 0 10px;
-            font-size: 32px;
-        }
-
-        header p {
-            margin: 0;
-            color: #d1d5db;
-            font-size: 16px;
-        }
+        header h1 { margin: 0 0 10px; font-size: 32px; }
+        header p { margin: 0; color: #d1d5db; font-size: 16px; }
 
         main {
             max-width: 900px;
@@ -48,14 +37,8 @@
             padding: 0 20px;
         }
 
-        .intro {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .intro h2 {
-            margin-bottom: 8px;
-        }
+        .intro { text-align: center; margin-bottom: 30px; }
+        .intro h2 { margin-bottom: 8px; }
 
         .apps {
             display: grid;
@@ -70,14 +53,8 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .app-card h3 {
-            margin-top: 0;
-            font-size: 24px;
-        }
-
-        .app-card p {
-            color: #4b5563;
-        }
+        .app-card h3 { margin-top: 0; font-size: 24px; }
+        .app-card p { color: #4b5563; }
 
         .links {
             margin-top: 20px;
@@ -94,10 +71,13 @@
             color: #111827;
             text-decoration: none;
             font-weight: 500;
+            transition: background 0.2s ease;
         }
 
-        .links a:hover {
+        .links a:hover, .links a:focus-visible {
             background: #e5e7eb;
+            outline: 2px solid #9ca3af;
+            outline-offset: 2px;
         }
 
         footer {
@@ -108,106 +88,54 @@
         }
 
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
-
-            main {
-                margin-top: 25px;
-            }
+            header h1 { font-size: 26px; }
+            main { margin-top: 25px; }
         }
     </style>
 </head>
 
 <body>
-
 <header>
-    <h1>App Legal & Privacy Information</h1>
-
-    <p>
-        Privacy policies and account and data deletion resources
-        for our applications.
-    </p>
+    <h1>App Legal &amp; Privacy Information</h1>
+    <p>Privacy policies, terms of service, and account and data deletion resources for our applications.</p>
 </header>
 
 <main>
-
     <section class="intro">
         <h2>Our Applications</h2>
-
-        <p>
-            Select an application below to view its privacy policy
-            or account and data deletion information.
-        </p>
+        <p>Select an application below to view its privacy policy, terms of service, or account and data deletion information.</p>
     </section>
 
     <section class="apps">
-
-        <!-- PhoneGuard -->
+        <!-- Phoneguard -->
         <div class="app-card">
-
-            <h3>PhoneGuard</h3>
-
-            <p>
-                Privacy and data management information for the
-                PhoneGuard application.
-            </p>
+            <h3>Phoneguard</h3>
+            <p>Privacy, service terms, and data management information for the Phoneguard application.</p>
 
             <div class="links">
-
-                <a href="./Phoneguard/privacy-policy/">
-                    Privacy Policy
-                </a>
-
-                <a href="./Phoneguard/account-deletion/">
-                    Account & Data Deletion
-                </a>
-
+                <a href="./Phoneguard/privacy-policy/">Privacy Policy</a>
+                <a href="./Phoneguard/terms-of-service/">Terms of Service</a>
+                <a href="./Phoneguard/account-deletion/">Account &amp; Data Deletion</a>
             </div>
-
         </div>
 
-
-        <!-- Bhumitra -->
+        <!-- BhuMitra -->
         <div class="app-card">
-
-            <h3>Bhumitra</h3>
-
-            <p>
-                Privacy and data management information for the
-                Bhumitra application.
-            </p>
+            <h3>BhuMitra</h3>
+            <p>Privacy, service terms, and data management information for the BhuMitra application.</p>
 
             <div class="links">
-
-                <a href="./Bhumitra/privacy-policy/">
-                    Privacy Policy
-                </a>
-
-                <a href="./Bhumitra/account-deletion/">
-                    Account & Data Deletion
-                </a>
-
+                <a href="./Bhumitra/privacy-policy/">Privacy Policy</a>
+                <a href="./Bhumitra/terms-of-service/">Terms of Service</a>
+                <a href="./Bhumitra/account-deletion/">Account &amp; Data Deletion</a>
             </div>
-
         </div>
-
     </section>
-
 </main>
 
 <footer>
-
-    <p>
-        &copy; 2026. All rights reserved.
-    </p>
-
-    <p>
-        This website provides legal, privacy, and data management
-        information for our applications.
-    </p>
-
+    <p>&copy; 2026. All rights reserved.</p>
+    <p>This website provides legal, privacy, and data management information for our applications.</p>
 </footer>
-
 </body>
 </html>
